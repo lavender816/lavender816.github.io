@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://lavender816.github.io</id>
+    <title>lavender</title>
+    <subtitle></subtitle>
+    <icon>https://lavender816.github.io/images/favicon.ico</icon>
+    <link href="https://lavender816.github.io" />
+    <author>
+      <name>Lavender</name>
+    </author>
+    <updated>2021-07-08T14:32:18.034Z</updated>
+    <entry>
+        <id>https://lavender816.github.io/2021/07/08/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/</id>
+        <title>OpenGL 导入模型</title>
+        <link rel="alternate" href="https://lavender816.github.io/2021/07/08/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/"/>
+        <content type="html">&lt;h1 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h1&gt;
+&lt;h2 id=&#34;学习网站&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#学习网站&#34;&gt;#&lt;/a&gt; 学习网站&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC1jbi5naXRodWIuaW8v&#34;&gt;LearnOpenGL CN:   &lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC1jbi5naXRodWIuaW8v&#34;&gt;https://learnopengl-cn.github.io/&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;依赖开源项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#依赖开源项目&#34;&gt;#&lt;/a&gt; 依赖开源项目&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;lt;big&amp;gt;Assimp:   &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Fzc2ltcC9hc3NpbXA=&#34;&gt;https://github.com/assimp/assimp&lt;/span&gt;  (注：这个需要编译，后续会说，直接下载源文件不管用)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Fzc2ltcC5vcmcvaW5kZXgucGhwL2Rvd25sb2Fkcw==&#34;&gt;下载 Assimp:    &lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Fzc2ltcC5vcmcvaW5kZXgucGhwL2Rvd25sb2Fkcw==&#34;&gt;http://assimp.org/index.php/downloads&lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&amp;lt;big&amp;gt;GLFW:    &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dsZncvZ2xmdw==&#34;&gt;https://github.com/glfw/glfw&lt;/span&gt;  (注：这个因为需要 lib 文件，所以需要官网下载相应的库文件等)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2xmdy5vcmcvZG93bmxvYWQuaHRtbA==&#34;&gt;下载 GLFW:    &lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2xmdy5vcmcvZG93bmxvYWQuaHRtbA==&#34;&gt;https://www.glfw.org/download.html&lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;GLM:    &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ctdHJ1Yy9nbG0=&#34;&gt;https://github.com/g-truc/glm&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;STB:   &amp;lt;/big&amp;gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL25vdGhpbmdzL3N0Yg==&#34;&gt;https://github.com/nothings/stb&lt;/span&gt;   (注：其实只用到一个关键文件 &lt;code&gt;stb_image.h&lt;/code&gt; ，直接手动添加头文件也可)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;GLAD 下载:    &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nbGFkLmRhdjFkLmRlLw==&#34;&gt;https://glad.dav1d.de/&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ide&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ide&#34;&gt;#&lt;/a&gt; IDE&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;big&amp;gt;Visual Studio 16 2019 (VS 2019)&amp;lt;/big&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(注：一定要选定好统一的调试模式，例如 Debug 模式 /x64，后续的 Assimp 编译模式也要与此统一：Debug 模式 /x64，以及 GLFW 的相应文件下载也是 x64 的)&lt;/p&gt;
+&lt;p&gt;另外，本人习惯：所有后续的 include 文件 (.h 包含目录)、lib 文件 (.lib 库目录) 都是使用的 VS 2019 默认的目录，应该是 &lt;code&gt;Microsoft Visual Studio（VS2019安装目录）\2019\Community\VC\Tools\MSVC\14.28.29910&lt;/code&gt;  里面的 &lt;code&gt;include&lt;/code&gt;  文件夹和 &lt;code&gt;lib&lt;/code&gt;  文件夹，查看方法：打开菜单 -&amp;gt; 项目 -&amp;gt;（项目）属性 -&amp;gt;VC ++ 目录 -&amp;gt; 包含目录 -&amp;gt; 编辑，在下方计算的值即可看到目录位置；也可以自定义相应的目录，在上述位置中修改添加等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件&#34;&gt;#&lt;/a&gt; 软件&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;Cmake:     &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbWFrZS5vcmcvZG93bmxvYWQv&#34;&gt;https://cmake.org/download/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;需要 cmake 对 assimp 进行编译&lt;/p&gt;
+&lt;p&gt;当快捷键 &lt;code&gt;win&lt;/code&gt; + &lt;code&gt;R&lt;/code&gt;  输入 &lt;code&gt;cmd&lt;/code&gt; ，输入 &lt;code&gt;cmake --help&lt;/code&gt;  显示&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Usage&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  cmake &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;path-to-source&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  cmake &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;path-to-existing-build&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  cmake &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; -S &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;path-to-source&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; -B &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;path-to-build&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Specify a &lt;span class=&#34;token builtin class-name&#34;&gt;source&lt;/span&gt; directory to &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;re-&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;generate a build system &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token for-or-select variable&#34;&gt;it&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; the&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;current working directory.  Specify an existing build directory to&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;re-generate its build system.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                                   · · · · · ·&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;类似如上，即成功&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;正式开始&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#正式开始&#34;&gt;#&lt;/a&gt; 正式开始&lt;/h1&gt;
+&lt;h2 id=&#34;1-新建项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-新建项目&#34;&gt;#&lt;/a&gt; 1、新建项目&lt;/h2&gt;
+&lt;p&gt;打开 VS 2019，新建一个普通的控制台项目即可；&lt;/p&gt;
+&lt;p&gt;以下以 LearnOpenGL CN 上项目为例：&lt;/p&gt;
+&lt;p&gt;打开&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9c3JjLzMubW9kZWxfbG9hZGluZy8xLm1vZGVsX2xvYWRpbmcvbW9kZWxfbG9hZGluZy5jcHA=&#34;&gt; https://learnopengl.com/code_viewer_gh.php?code=src/3.model_loading/1.model_loading/model_loading.cpp&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;将源码复制到对应工程的源文件中，此时会有很多报错，不要急，因为缺少相应的头文件等&lt;/p&gt;
+&lt;h2 id=&#34;2-配置导入头文件重要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-配置导入头文件重要&#34;&gt;#&lt;/a&gt; 2、配置导入头文件（重要）&lt;/h2&gt;
+&lt;h3 id=&#34;1-glad&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-glad&#34;&gt;#&lt;/a&gt; (1) GLAD&lt;/h3&gt;
+&lt;p&gt;打开网站：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nbGFkLmRhdjFkLmRlLw==&#34;&gt;https://glad.dav1d.de/&lt;/span&gt;，在 API 里选择对应的 opengl 版本下载即可，本项目以 opengl 版本为 4.1 为例，最后点击下方的 &lt;code&gt;Generate&lt;/code&gt;  下载；&lt;/p&gt;
+&lt;p&gt;下载 &lt;code&gt;glad.zip&lt;/code&gt; ，解压后找到 &lt;code&gt;glad/src&lt;/code&gt;  下的 &lt;code&gt;glad.c&lt;/code&gt; ，添加到项目 -&amp;gt; 源文件中，找到 &lt;code&gt;glad/include/glad&lt;/code&gt;  文件夹，将其复制到 VS 2019 对应的包含目录中（开头已经说明）。&lt;/p&gt;
+&lt;h3 id=&#34;2-glfw&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-glfw&#34;&gt;#&lt;/a&gt; (2) GLFW&lt;/h3&gt;
+&lt;p&gt;打开网站：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2xmdy5vcmcvZG93bmxvYWQuaHRtbA==&#34;&gt;https://www.glfw.org/download.html&lt;/span&gt;，我是 Windows 平台，64 位，所以点击 &lt;code&gt;64-bit Windows binaries&lt;/code&gt;  下载，解压后打开 &lt;code&gt;lib-vc2019&lt;/code&gt; ，将里面的 lib 文件复制到 VS 2019 对应的库目录 x64 文件夹中；&lt;/p&gt;
+&lt;p&gt;接下来，打开菜单 -&amp;gt; 项目 -&amp;gt; 属性，找见链接器 -&amp;gt; 输入 -&amp;gt; 附加依赖项 -&amp;gt; 编辑，输入 &lt;code&gt;glfw3.lib&lt;/code&gt; ，确定；&lt;/p&gt;
+&lt;p&gt;下载&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dsZncvZ2xmdy90cmVlL21hc3Rlci9pbmNsdWRl&#34;&gt; https://github.com/glfw/glfw/tree/master/include&lt;/span&gt; 里的 GLFW 文件夹，解压后复制 GLFW 文件夹至 VS 2019 对应的包含目录中。&lt;/p&gt;
+&lt;h3 id=&#34;3-glm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-glm&#34;&gt;#&lt;/a&gt; (3) GLM&lt;/h3&gt;
+&lt;p&gt;下载&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ctdHJ1Yy9nbG0=&#34;&gt; https://github.com/g-truc/glm&lt;/span&gt;，复制里面的 glm 文件夹至 VS 2019 对应的包含目录中即可。&lt;/p&gt;
+&lt;h3 id=&#34;4-learnopengl头文件问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-learnopengl头文件问题&#34;&gt;#&lt;/a&gt; (4) LearnOpenGL 头文件问题&lt;/h3&gt;
+&lt;p&gt;打开&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9c3JjLzMubW9kZWxfbG9hZGluZy8xLm1vZGVsX2xvYWRpbmcvbW9kZWxfbG9hZGluZy5jcHA=&#34;&gt; https://learnopengl.com/code_viewer_gh.php?code=src/3.model_loading/1.model_loading/model_loading.cpp&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;鼠标移动至 &lt;code&gt;#include &amp;lt;learnopengl/shader_m.h&amp;gt;&lt;/code&gt;  中，点击，即可跳转至 shader_m.h 文件，在项目中头文件右键，添加新建项，命名为 shader_m.h，复制代码至文件中；&lt;/p&gt;
+&lt;p&gt;后续的 &lt;code&gt;camera.h&lt;/code&gt;  和 &lt;code&gt;model.h&lt;/code&gt;  添加方法相同，都是新建头文件，复制代码进去；对用网站地址：&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;shader_m.h:     &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9aW5jbHVkZXMvbGVhcm5vcGVuZ2wvc2hhZGVyLmg=&#34;&gt;https://learnopengl.com/code_viewer_gh.php?code=includes/learnopengl/shader.h&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;camera.h:     &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9aW5jbHVkZXMvbGVhcm5vcGVuZ2wvY2FtZXJhLmg=&#34;&gt;https://learnopengl.com/code_viewer_gh.php?code=includes/learnopengl/camera.h&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;model.h:     &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9aW5jbHVkZXMvbGVhcm5vcGVuZ2wvbW9kZWwuaA==&#34;&gt;https://learnopengl.com/code_viewer_gh.php?code=includes/learnopengl/model.h&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然后，将头文件由（例） &lt;code&gt;#include &amp;lt;learnopengl/shader_m.h&amp;gt;&lt;/code&gt;  改成 &lt;code&gt;#include &amp;quot;shader_m.h&amp;quot;&lt;/code&gt; ，后面的 camera.h 和 model.h 相同&lt;/p&gt;
+&lt;h3 id=&#34;5-modelh头文件问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-modelh头文件问题&#34;&gt;#&lt;/a&gt; (5) model.h 头文件问题&lt;/h3&gt;
+&lt;p&gt;此时 shader_m.h 文件和 camera.h 文件都没有错误，但 model.h 文件还需要配置一些头文件，包括 stb_image.h 文件、assimp 库、mesh.h 和 shader.h，下面先说明 mesh.h 和 shader.h&lt;/p&gt;
+&lt;p&gt;和 (4) 一样，都是新建头文件，复制对应的代码进去；对用网站地址：&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;mesh.h:     &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9aW5jbHVkZXMvbGVhcm5vcGVuZ2wvbWVzaC5o&#34;&gt;https://learnopengl.com/code_viewer_gh.php?code=includes/learnopengl/mesh.h&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;big&amp;gt;shader.h:     &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9aW5jbHVkZXMvbGVhcm5vcGVuZ2wvc2hhZGVyLmg=&#34;&gt;https://learnopengl.com/code_viewer_gh.php?code=includes/learnopengl/shader.h&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然后，将头文件由（例） &lt;code&gt;#include &amp;lt;learnopengl/mesh.h&amp;gt;&lt;/code&gt;  改成 &lt;code&gt;#include &amp;quot;mesh.h&amp;quot;&lt;/code&gt; ，后面的 shader.h 相同&lt;/p&gt;
+&lt;p&gt;注：mesh.h 中也引入了 shader.h，也需要改一下&lt;/p&gt;
+&lt;h3 id=&#34;6-stb_imageh头文件问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-stb_imageh头文件问题&#34;&gt;#&lt;/a&gt; (6) stb_image.h 头文件问题&lt;/h3&gt;
+&lt;p&gt;项目头文件新建.h 文件命名为 stb_image.h&lt;/p&gt;
+&lt;p&gt;LearnOpenGL 网站地址如下：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC1jbi5naXRodWIuaW8vMDElMjBHZXR0aW5nJTIwc3RhcnRlZC8wNiUyMFRleHR1cmVzLyNzdGJfaW1hZ2Vo&#34;&gt;https://learnopengl-cn.github.io/01 Getting started/06 Textures/#stb_imageh&lt;/span&gt;，可作为了解参考&lt;/p&gt;
+&lt;p&gt;代码地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL25vdGhpbmdzL3N0Yi9ibG9iL21hc3Rlci9zdGJfaW1hZ2UuaA==&#34;&gt;https://github.com/nothings/stb/blob/master/stb_image.h&lt;/span&gt;，复制代码至新建的头文件中，即可，头文件改成 &lt;code&gt;#include &amp;quot;stb_image.h&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;** 重要⭐⭐⭐：** 这时直接引用会报错，代码 stb_image.h 里有如下说明：&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Do &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   &lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;define&lt;/span&gt; &lt;span class=&#34;token macro-name&#34;&gt;STB_IMAGE_IMPLEMENTATION&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;before you include &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt; file in &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;one&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; C &lt;span class=&#34;token operator&#34;&gt;or&lt;/span&gt; C&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt; file to create the implementation&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;因此，要在 &lt;code&gt;#include &amp;quot;stb_image.h&amp;quot;&lt;/code&gt;  引用前加一行，如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;define&lt;/span&gt; &lt;span class=&#34;token macro-name&#34;&gt;STB_IMAGE_IMPLEMENTATION&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;stb_image.h&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;7-assimp库核心&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-assimp库核心&#34;&gt;#&lt;/a&gt; (7) assimp 库（核心）&lt;/h3&gt;
+&lt;p&gt;&amp;lt;big&amp;gt; 下载 Assimp:    &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Fzc2ltcC5vcmcvaW5kZXgucGhwL2Rvd25sb2Fkcw==&#34;&gt;http://assimp.org/index.php/downloads&lt;/span&gt;，选择 &lt;code&gt;Get the sourcecode&lt;/code&gt;  或者直接访问&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Fzc2ltcC9hc3NpbXAvcmVsZWFzZXMvdGFnL3Y1LjAuMQ==&#34;&gt; https://github.com/assimp/assimp/releases/tag/v5.0.1&lt;/span&gt; 下载 &lt;code&gt;Source code (zip)&lt;/code&gt;  （以这个 5.0.1 版本为例）&lt;/p&gt;
+&lt;p&gt;解压 assimp-5.0.1，新建文件夹 build，按住 &lt;code&gt;Shift&lt;/code&gt;  键，右键，选择 &lt;code&gt;在此处打开Powershell窗口&lt;/code&gt; ，输入以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cmake &lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt; -G &lt;span class=&#34;token string&#34;&gt;&#34;Visual Studio 16 2019&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;回车键，如图生成以下文件即成功：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/04/10/B6Ix9CtgN1Xuoqd.png&#34; alt=&#34;image-20210410225638071&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;打开.sln（Solution 文件）, 注意编译环境是 Debug /x64，选择 ALL_BUILD，生成&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/04/10/cAkrC6LjBVqfJGl.png&#34; alt=&#34;image-20210410234255092&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;等待生成成功，输出窗口出现以下即为成功：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/04/10/G9LPNR7FwMStHkI.png&#34; alt=&#34;image-20210410230354912&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;复制 &lt;code&gt;assimp-5.0.1\build\include\assimp&lt;/code&gt;  文件夹下的 &lt;code&gt;config.h&lt;/code&gt;  到 &lt;code&gt;assimp-5.0.1\include\assimp&lt;/code&gt;  文件夹里&lt;/p&gt;
+&lt;p&gt;复制下载的 &lt;code&gt;assimp-5.0.1\include&lt;/code&gt;  文件夹里的 &lt;code&gt;assimp&lt;/code&gt;  文件夹至 VS 2019 对应的包含目录中。&lt;/p&gt;
+&lt;p&gt;复制 &lt;code&gt;assimp-5.0.1\build\code\Debug&lt;/code&gt;  里的除.dll 文件到 VS 2019 对应的库目录 x64 文件夹中。&lt;/p&gt;
+&lt;p&gt;注意：此时运行可能会出现如下问题：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/04/10/E4MxHKu5cRDkL3s.png&#34; alt=&#34;image-20210410231413293&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;p&gt;将 &lt;code&gt;assimp-5.0.1\build\code\Debug&lt;/code&gt;  里的 &lt;code&gt;assimp-vc142-mtd.dll&lt;/code&gt;  复制到 &lt;code&gt;项目文件夹/x64/Debug&lt;/code&gt;  文件夹下&lt;/p&gt;
+&lt;p&gt;，或者复制到系统的 &lt;code&gt;C:/Windows/System32&lt;/code&gt;  文件夹下（因为是 x64 下）&lt;/p&gt;
+&lt;p&gt;接下来，打开菜单 -&amp;gt; 项目 -&amp;gt; 属性，找见链接器 -&amp;gt; 输入 -&amp;gt; 附加依赖项 -&amp;gt; 编辑，输入 &lt;code&gt;assimp-vc142-mtd.dll&lt;/code&gt; ，确定；&lt;/p&gt;
+&lt;h3 id=&#34;8-模型问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-模型问题&#34;&gt;#&lt;/a&gt; (8) 模型问题&lt;/h3&gt;
+&lt;p&gt;打开主函数文件，大概在 80 行代码处有以下代码&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// build and compile shaders&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// -------------------------&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    Shader &lt;span class=&#34;token function&#34;&gt;ourShader&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;1.model_loading.vs&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;1.model_loading.fs&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// load models&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// -----------&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    Model &lt;span class=&#34;token function&#34;&gt;ourModel&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;FileSystem&lt;/span&gt;&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getPath&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;resources/objects/backpack/backpack.obj&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其中 &lt;code&gt;1.model_loading.vs&lt;/code&gt;  和  &lt;code&gt;1.model_loading.fs&lt;/code&gt;  都是 shader 文件， &lt;code&gt;backpack.obj&lt;/code&gt;  是 OBJ 格式的模型文件&lt;/p&gt;
+&lt;p&gt;接下来，先搞定 shader 文件，分别在项目源文件新建文件，分别命名为 &lt;code&gt;1.model_loading.vs&lt;/code&gt;  和  &lt;code&gt;1.model_loading.fs&lt;/code&gt; ，&lt;/p&gt;
+&lt;p&gt;访问网站，粘贴代码，网站和代码如下：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9c3JjLzMubW9kZWxfbG9hZGluZy8xLm1vZGVsX2xvYWRpbmcvMS5tb2RlbF9sb2FkaW5nLnZz&#34;&gt;1.model_loading.vs&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;version&lt;/span&gt; &lt;span class=&#34;token expression&#34;&gt;&lt;span class=&#34;token number&#34;&gt;330&lt;/span&gt; core&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;layout&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;location &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; in vec3 aPos&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;layout&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;location &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; in vec3 aNormal&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;layout&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;location &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; in vec2 aTexCoords&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;out vec2 TexCoords&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;uniform mat4 model&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;uniform mat4 view&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;uniform mat4 projection&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    TexCoords &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; aTexCoords&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;    &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    gl_Position &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; projection &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; view &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; model &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;vec4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;aPos&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC5jb20vY29kZV92aWV3ZXJfZ2gucGhwP2NvZGU9c3JjLzMubW9kZWxfbG9hZGluZy8xLm1vZGVsX2xvYWRpbmcvMS5tb2RlbF9sb2FkaW5nLmZz&#34;&gt;1.model_loading.fs&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;version&lt;/span&gt; &lt;span class=&#34;token expression&#34;&gt;&lt;span class=&#34;token number&#34;&gt;330&lt;/span&gt; core&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;out vec4 FragColor&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;in vec2 TexCoords&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;uniform sampler2D texture_diffuse1&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;    &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    FragColor &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;texture&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;texture_diffuse1&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; TexCoords&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;接下来搞定 obj 模型文件，按照 &lt;code&gt;resources/objects/backpack/backpack.obj&lt;/code&gt;  新建文件夹也可，自己定义路径也可，我放在与.sln 同一级文件夹下新建的 resources/objects/backpack 目录下，即 &lt;code&gt;../resources/objects/backpack/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;下载模型 &amp;lt;big&amp;gt;nanosuit.rar:    &amp;lt;/big&amp;gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC1jbi5naXRodWIuaW8vZGF0YS9uYW5vc3VpdC5yYXI=&#34;&gt;https://learnopengl-cn.github.io/data/nanosuit.rar&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然后解压，复制所以文件至 &lt;code&gt;../resources/objects/backpack/&lt;/code&gt;  下，对于我这种代码改成&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// load models&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// -----------&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    Model &lt;span class=&#34;token function&#34;&gt;ourModel&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;FileSystem&lt;/span&gt;&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getPath&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;../resources/objects/backpack/nanosuit.obj&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;最后，上方代码会报错，是关于 FileSystem 相关的，改成如下就正确了&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// build and compile shaders&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// -------------------------&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    Shader &lt;span class=&#34;token function&#34;&gt;ourShader&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;1.model_loading.vs&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;1.model_loading.fs&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// load models&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// -----------&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    Model &lt;span class=&#34;token function&#34;&gt;ourModel&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;../resources/objects/backpack/nanosuit.obj&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;最终成果&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最终成果&#34;&gt;#&lt;/a&gt; 最终成果&lt;/h1&gt;
+&lt;p&gt;运行如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2021/04/10/9zuG3gcvnDB8TKe.png&#34; alt=&#34;image-20210410233446712&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;成功！&lt;/strong&gt;&lt;/p&gt;
+</content>
+        <updated>2021-07-08T14:32:18.034Z</updated>
+    </entry>
+    <entry>
+        <id>https://lavender816.github.io/2021/07/08/github%E7%9B%B8%E5%85%B3/</id>
+        <title>Github提速/下载</title>
+        <link rel="alternate" href="https://lavender816.github.io/2021/07/08/github%E7%9B%B8%E5%85%B3/"/>
+        <content type="html">&lt;h1 id=&#34;一-提升github访问速度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-提升github访问速度&#34;&gt;#&lt;/a&gt; 一、提升 Github 访问速度&lt;/h1&gt;
+&lt;h2 id=&#34;1-github镜像网站访问&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-github镜像网站访问&#34;&gt;#&lt;/a&gt; 1、Github 镜像网站访问&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLmNucG1qcy5vcmcv&#34;&gt;https://github.com.cnpmjs.org/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQuc2R1dC5tZS8=&#34;&gt;https://git.sdut.me/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9odWIuZmFzdGdpdC5vcmc=&#34;&gt;https://hub.fastgit.org&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-修改hosts文件加速访问&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-修改hosts文件加速访问&#34;&gt;#&lt;/a&gt; 2、 修改 Hosts 文件加速访问&lt;/h2&gt;
+&lt;h3 id=&#34;1获取github的globalsslfastly&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1获取github的globalsslfastly&#34;&gt;#&lt;/a&gt; (1) 获取 github 的 global.ssl.fastly&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;访问&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mYXN0bHkubmV0LmlwYWRkcmVzcy5jb20vZ2l0aHViLmdsb2JhbC5zc2wuZmFzdGx5Lm5ldCNpcGluZm8=&#34;&gt; https://fastly.net.ipaddress.com/github.global.ssl.fastly.net#ipinfo&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/04/02/ceyWpd.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;获得 IP 为 &lt;code&gt;199.232.69.194&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-获取githubcom地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-获取githubcom地址&#34;&gt;#&lt;/a&gt; (2) 获取 github.com 地址&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLmlwYWRkcmVzcy5jb20vI2lwaW5mbw==&#34;&gt;https://github.com.ipaddress.com/#ipinfo&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/04/02/cecPqP.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;获得 IP 为 &lt;code&gt;140.82.112.4&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3修改hosts文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3修改hosts文件&#34;&gt;#&lt;/a&gt; (3) 修改 Hosts 文件&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hosts 文件位置： &lt;code&gt;C:\Windows\System32\drivers\etc\hosts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;右键属性，修改 Users 可写入&lt;/p&gt;
+&lt;p&gt;如下图&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z3.ax1x.com/2021/04/02/cehhes.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;打开方式，选择记事本，输入以下&lt;/p&gt;
+&lt;figure class=&#34;highlight txt&#34;&gt;&lt;figcaption data-lang=&#34;txt&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;199.232.69.194 github.global.ssl.fastly.net&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;140.82.112.4 github.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;以上两个 IP 地址都是刚才两个网页获得，不同电脑 IP 可能不同&lt;/p&gt;
+&lt;p&gt;最后 &lt;code&gt;Win&lt;/code&gt; + &lt;code&gt;R&lt;/code&gt; ，打开运行，输入 &lt;code&gt;cmd&lt;/code&gt; ，进入命令提示符，输入&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ipconfig /flushdns&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;刷新 DNS 缓存，最后应该能正常访问&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-github520包含图片加载问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-github520包含图片加载问题&#34;&gt;#&lt;/a&gt; 3、Github520 (包含图片加载问题)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Github 大佬的加速 github 和解决图片加载问题的项目&lt;/p&gt;
+&lt;p&gt;地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzUyMXh1ZXdlaWhhbi9HaXRIdWI1MjA=&#34;&gt;https://github.com/521xueweihan/GitHub520&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;（emmm，能解决访问慢的问题，如果访问不了 github，emmm，这个方法不适用于您）&lt;/p&gt;
+&lt;p&gt;使用方法都在 Github 上完整给出&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;二-提高github下载速度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-提高github下载速度&#34;&gt;#&lt;/a&gt; 二、提高 Github 下载速度&lt;/h1&gt;
+&lt;h2 id=&#34;1-代理网站加速&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-代理网站加速&#34;&gt;#&lt;/a&gt; 1、 代理网站加速&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naHByb3h5LmNvbS8=&#34;&gt;https://ghproxy.com/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2doLmFwaS45OTk4ODg2Ni54eXov&#34;&gt;http://gh.api.99988866.xyz/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3Rvb2x3YS5jb20vZ2l0aHViLw==&#34;&gt;http://toolwa.com/github/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;4、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuemhsaDYuY24v&#34;&gt;https://github.zhlh6.cn/&lt;/span&gt;   （使用 &lt;code&gt;git clone&lt;/code&gt;  方式下载）&lt;/p&gt;
+&lt;p&gt;5、Github raw 加速：将  &lt;code&gt;raw.githubusercontent.com&lt;/code&gt;  替换成 &lt;code&gt;raw.staticdn.net&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;6、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaHJpbGwtcG9uZC0zZTgxLmh1bnNoLndvcmtlcnMuZGV2Lw==&#34;&gt;https://shrill-pond-3e81.hunsh.workers.dev/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;7、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGQuY2Mv&#34;&gt;http://gitd.cc/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;8、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRjbG9uZS5jb20v&#34;&gt;https://gitclone.com/&lt;/span&gt;（部分需要会员，效果显著）&lt;/p&gt;
+&lt;p&gt;9、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wZC56d2MzNjUuY29tLw==&#34;&gt;https://pd.zwc365.com/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;10、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kLnNlcmN0bC5jb20v&#34;&gt;https://d.serctl.com/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;11、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3Rvb2wubWtibG9nLmNuL2Rvd25naXQvIy9ob21l&#34;&gt;http://tool.mkblog.cn/downgit/#/home&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-油猴插件配置脚本适用于基于-chromium-的浏览器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-油猴插件配置脚本适用于基于-chromium-的浏览器&#34;&gt;#&lt;/a&gt; 2、油猴插件配置脚本 (适用于基于 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2hyb21pdW0ub3JnLw==&#34;&gt;Chromium&lt;/span&gt; 的浏览器)&lt;/h2&gt;
+&lt;h3 id=&#34;安装油猴插件支持chrome-microsoft-edge-360浏览器等&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装油猴插件支持chrome-microsoft-edge-360浏览器等&#34;&gt;#&lt;/a&gt; 安装油猴插件（支持 Chrome、Microsoft Edge、360 浏览器等）&lt;/h3&gt;
+&lt;h3 id=&#34;1-脚本一github-accelerator&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-脚本一github-accelerator&#34;&gt;#&lt;/a&gt; ① &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2phZGV6aS9naXRodWItYWNjZWxlcmF0b3Iv&#34;&gt;脚本一：github-accelerator&lt;/span&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;2-脚本二github-增强-高速下载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-脚本二github-增强-高速下载&#34;&gt;#&lt;/a&gt; ② &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ncmVhc3lmb3JrLm9yZy9zY3JpcHRzLzQxMjI0NQ==&#34;&gt;脚本二：Github 增强 - 高速下载&lt;/span&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;3-插件加速适用于基于-chromium-的浏览器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-插件加速适用于基于-chromium-的浏览器&#34;&gt;#&lt;/a&gt; 3 插件加速 (适用于基于 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2hyb21pdW0ub3JnLw==&#34;&gt;Chromium&lt;/span&gt; 的浏览器)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;插件名称：Github 加速&lt;/p&gt;
+&lt;p&gt;地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jaHJvbWUuZ29vZ2xlLmNvbS93ZWJzdG9yZS9kZXRhaWwvZ2l0aHViJUU1JThBJUEwJUU5JTgwJTlGL21mbmtmbGlkam5sYWRua2xkZm9ubmFpY2xqcHBhaHBnL3JlbGF0ZWQ/aGw9emgtQ04=&#34;&gt;Github 加速&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;插件 ID：mfnkflidjnladnkldfonnaicljppahpg&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(正常渠道方法：需要科学上网，不过既然能科学上网了，不就直接访问 Gihub 了吗？这个插件应该适用于只能通过谷歌访问助手下载插件的朋友)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Chrome Extension 第三方下载：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jaHJvbWUucGljdHVyZWtub3cuY29tLw==&#34;&gt;1、收藏猫插件下载&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jaHJvbWUtZXh0ZW5zaW9uLWRvd25sb2FkZXIuY29tLw==&#34;&gt;2、chrome-extension-downloader: 根据插件 ID 下载 crx 文件&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;4-gitee转入下载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-gitee转入下载&#34;&gt;#&lt;/a&gt; 4 Gitee 转入下载&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、申请一个 gitee 账户&lt;/p&gt;
+&lt;p&gt;2、右上角 “+” 号 —&amp;gt; 从 Github/GitLab 导入&lt;/p&gt;
+&lt;p&gt;3、导入成功后即可进行下载等各项操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;5-idm下载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-idm下载&#34;&gt;#&lt;/a&gt; 5、IDM 下载&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实就是利用 Internet Download Manager 的多线程下载的优势达到加速下载的目的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;6-哔&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-哔&#34;&gt;#&lt;/a&gt; 6、哔 ——————&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;代理、梯子（科学上网）YOU  KNOW&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="github" scheme="https://lavender816.github.io/categories/github/" />
+        <category term="github下载" scheme="https://lavender816.github.io/categories/github/github%E4%B8%8B%E8%BD%BD/" />
+        <category term="github" scheme="https://lavender816.github.io/tags/github/" />
+        <category term="提速" scheme="https://lavender816.github.io/tags/%E6%8F%90%E9%80%9F/" />
+        <updated>2021-07-08T14:32:18.031Z</updated>
+    </entry>
+    <entry>
+        <id>https://lavender816.github.io/2021/07/08/hello-world/</id>
+        <title>Hello World</title>
+        <link rel="alternate" href="https://lavender816.github.io/2021/07/08/hello-world/"/>
+        <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo new &lt;span class=&#34;token string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo generate&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo deploy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+</content>
+        <updated>2021-07-08T13:26:56.240Z</updated>
+    </entry>
+</feed>
