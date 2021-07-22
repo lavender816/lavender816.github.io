@@ -1,0 +1,554 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="lavender" href="https://lavender816.github.io/rss.xml"><link rel="alternate" type="application/atom+xml" title="lavender" href="https://lavender816.github.io/atom.xml"><link rel="alternate" type="application/json" title="lavender" href="https://lavender816.github.io/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/css/app.css?v=0.2.5"><meta name="keywords" content="OpenGL"><link rel="canonical" href="https://lavender816.github.io/2020/11/07/20201107opengl/"><title>OpenGL 相关函数资料汇总 - 学习 - OpenGL - 程序员 | Lavender's Blog = lavender</title><meta name="generator" content="Hexo 5.4.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">OpenGL 相关函数资料汇总</h1><div class="meta"><span class="item" title="创建时间：2020-11-07 19:28:09"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2020-11-07T19:28:09+08:00">2020-11-07</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>18k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>17 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Lavender's Blog</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://www.dmoe.cc/random.php?297486"></li><li class="item" data-background-image="https://www.dmoe.cc/random.php?652155"></li><li class="item" data-background-image="https://www.dmoe.cc/random.php?700658"></li><li class="item" data-background-image="https://www.dmoe.cc/random.php?509641"></li><li class="item" data-background-image="https://www.dmoe.cc/random.php?940392"></li><li class="item" data-background-image="https://www.dmoe.cc/random.php?84334"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" itemprop="item" rel="index" title="分类于 程序员"><span itemprop="name">程序员</span></a><meta itemprop="position" content="1"></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/OpenGL/" itemprop="item" rel="index" title="分类于 OpenGL"><span itemprop="name">OpenGL</span></a><meta itemprop="position" content="2"></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="item" rel="index" title="分类于 学习"><span itemprop="name">学习</span></a><meta itemprop="position" content="3"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://lavender816.github.io/2020/11/07/20201107opengl/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/images/avatar.png"><meta itemprop="name" content="Lavender"><meta itemprop="description" content=", "></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="lavender"></span><div class="body md" itemprop="articleBody"><h1 id="opengl-相关函数资料汇总"><a class="anchor" href="#opengl-相关函数资料汇总">#</a> OpenGL 相关函数资料汇总</h1><blockquote><p>所有 OpenGL 函数采用了以下格式：<br>. &lt;库前缀&gt;&lt; 根命令 &gt;&lt; 可选的参数个数 &gt;&lt; 可选的参数类型 &gt;<br>库前缀有 gl、glu、aux、glut、wgl、glx、agl 等等，分别表示该函数属于 openGL 的哪个开发库，从函数名后面中还可以看出需要多少个参数以及参数的类型。I 代表 int 型，f 代表 float 型，d 代表 double 型，u 代表无符号整型。</p></blockquote><blockquote><p>例如： glVertex3fv () 表示了该函数属于 gl 库，参数是三个 float 型参数指针。我们用 glVertex*() 来表示这一类函数。OpenGL 函数库相关的 API 有核心库 (gl)、实用库 (glu)、辅助库 (aux)、实用工具库 (glut)、窗口库 (glx、agl、wgl) 和扩展函数库等。gl 是核心，glu 是对 gl 的部分封装。glx、agl、wgl 是针对不同窗口系统的函数。glut 是为跨平台的 OpenGL 程序的工具包，比 aux 功能强大。扩展函数库是硬件厂商为实现硬件更新利用 OpenGL 的扩展机制开发的函数。</p></blockquote><h2 id="1-opengl核心库"><a class="anchor" href="#1-opengl核心库">#</a> 1、OpenGL 核心库</h2><blockquote><p>函数名的前缀为 gl；这部分函数用于常规的、核心的图形处理；此函数由 gl.dll 来负责解释执行：</p></blockquote><h3 id="绘制几何图形"><a class="anchor" href="#绘制几何图形">#</a> 绘制几何图形：</h3><pre><code>glVertex();  //在OpenGL中指定顶点
+glVertexPointer();  //指定数组顶点
+glArrayElement();  //指定用来呈现一个顶点的数组元素
+glBegin();  glEnd();  //定义一个或一组原始的顶点
+glEdgeFlag(); glEdgeFlagv(); // 定义一个边缘标志数组
+glPointSize();  //设定光栅点的直径
+glLineWidth(); //设定光栅线段的宽
+glLineStipple();  //设定线点绘图案
+glPolygonMode();  //选择一个多边形的光栅模式
+glFrontFace();  //定义多边形的前面和背面
+glPolygonStipple();  //设定多边形填充图案
+glDrawElements();  //渲染数组数据中的图元
+glRect();  //绘制一个矩形
+</code></pre><h3 id="坐标转换"><a class="anchor" href="#坐标转换">#</a> 坐标转换：</h3><pre><code>glTranslate();  //移动坐标系
+glRotate();  //选择
+glScale();  //缩放
+glViewPoint();  //视口变换
+glFrustum();  //当前矩阵乘上透视矩阵
+glOrtho();  //用垂直矩阵与当前矩阵相乘
+glClipPlane();  //定义被裁剪的一个平面几何体
+</code></pre><h3 id="矩阵操作-几何变换和投影变换的函数"><a class="anchor" href="#矩阵操作-几何变换和投影变换的函数">#</a> 矩阵操作、几何变换和投影变换的函数：</h3><pre><code>glPushMatrix();    //矩阵入栈函数
+glPopMatrix();     //矩阵出栈函数 
+glLoadMatrix();    //装载矩阵函数
+glMultMatrix();    //矩阵相乘函数
+glMatrixMode();    //当前矩阵函数
+glLoadIdentity();  //矩阵标准化函数
+glTranslate*(); glRotate*(); glScale*();    //几何变换函数
+glOrtho(); glFrustum(); //投影变换函数 
+glViewport(); //视口变换函数;;  
+glPushAttrib();   //属性堆栈的压入操作
+glPopAttrib();  //属性堆栈的弹出操作
+glPushName();   //名字堆栈的压入操作
+glPopName();   //名字堆栈的弹出操作
+glInitName();  // 初始化名字堆栈
+glLoadName();  //将一个名字调入名字堆栈
+</code></pre><h3 id="颜色-光照和材质的函数"><a class="anchor" href="#颜色-光照和材质的函数">#</a> 颜色、光照和材质的函数：</h3><pre><code>glColor*(); glIndex*();  //设置颜色模式函数 
+glLight*(); glLightModel*(); //设置光照效果的函数
+glMaterial();  //设置材质效果函数
+glNormal();  //设定当前顶点法向
+glNormalPointer();  //设定一个法向数组
+glColorMaterial();  //使一个材质色彩指向当前的色彩
+</code></pre><h3 id="显示列表函数"><a class="anchor" href="#显示列表函数">#</a> 显示列表函数：</h3><pre><code>glNewList();   //创建列表的函数
+glEndList();   //结束列表的函数
+glGenLists();   //生成列表的函数
+glCallList();   //调用显示列表的函数
+glDeleteLists();   //删除列表的函数
+</code></pre><h3 id="纹理映射函数"><a class="anchor" href="#纹理映射函数">#</a> 纹理映射函数：</h3><pre><code>glTexImage1D();  //一维纹理函数
+glTexImage2D();  //二维纹理函数
+glTexParameter*();  //设置纹理参数的函数
+glTexEnv*();  //设置纹理环境的函数
+glTetCoord*();  //设置纹理坐标的函数
+glTexSubImage1D();  //定义一个存在的一维纹理图像的一部分,但不能定义新的纹理
+glTexSubImage2D();  //定义一个存在的二维纹理图像的一部分,但不能定义新的纹理
+glTexGen();  //纹理坐标的自动生成
+glTexCoordPointer();  //定义一个纹理坐标数组
+glDeleteTextures();  //删除命名的纹理
+</code></pre><h3 id="帧缓存操作"><a class="anchor" href="#帧缓存操作">#</a> 帧缓存操作:</h3><pre><code>glClear();  //用当前值清除缓冲区
+glClearAccum();  //为累加缓冲区指定用于清除的值
+glClearColor();  //为色彩缓冲区指定用于清除的值
+glClearDepth();  // 为深度缓冲区指定用于清除的值
+glClearIndex();  //设置清除颜色
+glClearStencil();  //为模板缓冲区指定用于清除的值
+glDrawBuffer();  //定义选择哪个色彩缓冲区被绘制
+glIndexMask();  // 控制写色彩索引缓冲区里的单独位
+glColorMask();  // 允许或不允许写色彩组件帧缓冲区
+glDepthMask();  //允许或不允许写入深度缓冲区
+glStencilMask();  //控制在模板面写单独的位
+glStencilFunc(); //为模板测试设置功能和参照值
+glStencilOp();  //设置激活模式测试
+glDepthFunc();  // 定义用于深度缓冲区对照的数据
+glDepthRange();  //定义 z 值从标准的设备坐标映射到窗口坐标
+glLogicOp();  // 为色彩索引渲染定义一个逻辑像素操作
+glAccum();  //操作累加缓冲区
+</code></pre><h3 id="特殊效果函数"><a class="anchor" href="#特殊效果函数">#</a> 特殊效果函数：</h3><pre><code>glBlendFunc()； //融合函数 
+glHint()；  //反走样函数 
+glFog*();  //雾化效果函数
+</code></pre><h3 id="光栅化-像素操作函数"><a class="anchor" href="#光栅化-像素操作函数">#</a> 光栅化、像素操作函数：</h3><pre><code>glRasterPos*();  //像素位置
+glLineWidth()；  //线型宽度
+glPolygonMode()；  //多边形绘制模式 
+glReadPixel()；  //读取像素
+glCopyPixel()；  //复制像素
+glBitmap();  //绘制一个位图
+glDrawPixels();  //绘制一个位图
+glCopyTexImage1D();  //将像素从帧缓冲区拷贝到一个单空间纹理图象中
+glCopyTexImage2D();  //将像素从帧缓冲区拷贝到一个双空间纹理图象中
+glCopyTexSubImage1D();  //从帧缓冲区拷贝一个单空间纹理的子图象
+glCopyTexSubImage2D();  //从帧缓冲区拷贝一个双空间纹理的子图象
+glPixelZoom();  //设定像素缩放因数
+glPixelStore();  // 设定像素存储模式
+glPixelTransfer();  //设定像素传输模式
+glPixelMap();  //设定像素交换图
+</code></pre><h3 id="选择与反馈函数"><a class="anchor" href="#选择与反馈函数">#</a> 选择与反馈函数：</h3><pre><code>glRenderMode();  //渲染模式 
+glSelectBuffer(); //选择缓冲区
+glFeedbackBuffer(); //反馈缓冲区
+</code></pre><h3 id="曲线与曲面的绘制函数"><a class="anchor" href="#曲线与曲面的绘制函数">#</a> 曲线与曲面的绘制函数：</h3><pre><code>glMap*();  //生成曲线的函数
+glMapGrid*();  //生成曲面的函数
+glEvalCoord*(); glEvalMesh*();  //求值器的函数
+glMap1();  //定义一个一维求值程序
+glMap2();  //定义一个二维求值程序
+glEvalPoint();  //生成及求解一个网格中的单点
+</code></pre><h3 id="查询函数"><a class="anchor" href="#查询函数">#</a> 查询函数:</h3><pre><code>glGet();
+glGetClipPlane();
+glGetColorTableEXT();
+glGetColorTableParameterfvEXT();
+glGetColorTableParameterivEXT();
+glGetError();
+glGetLight();
+glGetMap();
+glGetMaterial();
+glGetPixelMap();
+glGetPointerv();
+glGetPolygonStipple();
+glGetString();
+glGetTexEnv();
+glGetTexImage();
+glGetTexLevelParameter();
+glGetTexParameter();
+</code></pre><h2 id="2opengl-实用库-the-opengl-utility-library-glu"><a class="anchor" href="#2opengl-实用库-the-opengl-utility-library-glu">#</a> 2．OpenGL 实用库 The OpenGL Utility Library (GLU)</h2><blockquote><p>函数名的前缀为 glu。OpenGL 提供了强大的但是为数不多的绘图命令，所有较复杂的绘图都必须从点、线、面开始。Glu 为了减轻繁重的编程工作，封装了 OpenGL 函数，Glu 函数通过调用核心库的函数，为开发者提供相对简单的用法，实现一些较为复杂的操作。此函数由 glu.dll 来负责解释执行。OpenGL 中的核心库和实用库可以在所有的 OpenGL 平台上运行。</p></blockquote><h3 id="辅助纹理贴图函数"><a class="anchor" href="#辅助纹理贴图函数">#</a> 辅助纹理贴图函数：</h3><pre><code>gluScaleImage();
+gluBuild1Dmipmaps();
+gluBuild2Dmipmaps();
+</code></pre><h3 id="坐标转换和投影变换函数"><a class="anchor" href="#坐标转换和投影变换函数">#</a> 坐标转换和投影变换函数：</h3><pre><code>gluPerspective(); gluOrtho2D(); gluLookAt()  //定义投影方式函数
+gluPickMatrix();  //拾取投影视景体函数
+gluProject(); gluUnProject();  //投影矩阵计算
+gluLookAt();
+</code></pre><h3 id="多边形镶嵌工具-网格化"><a class="anchor" href="#多边形镶嵌工具-网格化">#</a> 多边形镶嵌工具、网格化：</h3><pre><code>gluNewTess();
+gluDeleteTess();
+gluTessCallback();
+gluBeginPolygon();
+gluTessVertex();
+gluNextContour();
+gluEndPolygon();
+gluTessBeginPolygon();
+gluTessEndPolygon();
+gluTessBeginContour();
+gluTessBeginContour();
+gluTessProperty();
+gluTessNormal();
+</code></pre><h3 id="二次曲面绘制工具"><a class="anchor" href="#二次曲面绘制工具">#</a> 二次曲面绘制工具：</h3><pre><code>gluNewQuadric();
+gluSphere();  //球面
+gluCylinder(); //圆柱面锥面
+gluDisk();
+gluPartialDisk();
+gluDeleteQuadric();
+gluQuadricDrawStyle();
+gluQuadricNormals();
+gluQuadricOrientation();
+gluQuadricTexture();
+gluQuadricCallback();
+</code></pre><h3 id="绘制-nurbs-曲线和曲面"><a class="anchor" href="#绘制-nurbs-曲线和曲面">#</a> 绘制 NURBS 曲线和曲面：</h3><pre><code>gluNewNurbsRenderer();
+gluNurbsProperty();
+gluNurbsCallback();
+gluBeginCurve();
+gluEndCurve();
+gluNurbsCurve();
+gluDeleteNurbsRenderer();
+gluBeginSurface();
+gluEndSurface();
+gluNurbsSurface();
+gluBeginTrim();
+gluEndTrim();
+gluPwlCurve();
+gluBeginPolygon();
+gluEndPolygon();
+gluPickMatrix();
+</code></pre><h3 id="多重映射"><a class="anchor" href="#多重映射">#</a> 多重映射:</h3><pre><code>gluBuild1DMipmaps();
+gluBuild2DMipmaps();
+gluScaleImage();
+</code></pre><h3 id="查询函数-2"><a class="anchor" href="#查询函数-2">#</a> 查询函数:</h3><pre><code>gluErrorString();
+gluGetNurbsProperty();
+gluGetString();
+gluGetTessProperty();
+</code></pre><h3 id="错误反馈工具"><a class="anchor" href="#错误反馈工具">#</a> 错误反馈工具：</h3><pre><code>gluErrorString();  //获取出错信息的字符串
+</code></pre><h2 id="3opengl-辅助库"><a class="anchor" href="#3opengl-辅助库">#</a> 3．OpenGL 辅助库</h2><blockquote><p>函数名前缀为 aux。这部分函数提供窗口管理、输入输出处理以及绘制一些简单三维物体。此函数由 glaux.dll 来负责解释执行。创建 aux 库是为了学习和编写 OpenGL 程序，它更像是一个用于测试创意的预备基础接管。Aux 库在 windows 实现有很多错误，因此很容易导致频繁的崩溃。在跨平台的编程实例和演示中，aux 很大程度上已经被 glut 库取代。OpenGL 中的辅助库不能在所有的 OpenGL 平台上运行。</p></blockquote><h3 id="窗口初始化和退出函数"><a class="anchor" href="#窗口初始化和退出函数">#</a> 窗口初始化和退出函数：</h3><pre><code>auxInitDisplayMode();
+auxInitPosition();
+</code></pre><h3 id="窗口处理和时间输入函数"><a class="anchor" href="#窗口处理和时间输入函数">#</a> 窗口处理和时间输入函数：</h3><pre><code>auxReshapeFunc();
+auxKeyFunc();
+auxMouseFunc();
+</code></pre><h3 id="颜色索引装入函数"><a class="anchor" href="#颜色索引装入函数">#</a> 颜色索引装入函数:</h3><pre><code>auxSetOneColor();
+</code></pre><h3 id="三维物体绘制函数"><a class="anchor" href="#三维物体绘制函数">#</a> 三维物体绘制函数：</h3><pre><code>auxWireCube(); auxSolidCube();  //绘制立方体
+auxWireBox();  //长方体 
+auxWireTorus();  //环形圆纹面
+auxWireCylinder();  //圆柱 
+auxWireIcosahedron();  //二十面体
+auxWireOctahedron();  //八面体
+auxWireTetrahedron();  //四面体
+auxWireDodecahedron();  //十二面体
+auxWireCone();  //圆锥体
+auxWireTeapot();  //茶壶
+</code></pre><h3 id="背景过程管理函数"><a class="anchor" href="#背景过程管理函数">#</a> 背景过程管理函数：</h3><pre><code>auxIdleFunc();
+</code></pre><h3 id="程序运行函数"><a class="anchor" href="#程序运行函数">#</a> 程序运行函数：</h3><pre><code>auxMainLoop();
+</code></pre><h2 id="4opengl-工具库-opengl-utility-toolkit"><a class="anchor" href="#4opengl-工具库-opengl-utility-toolkit">#</a> 4．OpenGL 工具库 OpenGL Utility Toolkit</h2><blockquote><p>函数名前缀为 glut。glut 是不依赖于窗口平台的 OpenGL 工具包，由 Mark KLilgrad 在 SGI 编写（现在在 Nvidia），目的是隐藏不同窗口平台 API 的复杂度。 函数以 glut 开头，它们作为 aux 库功能更强的替代品，提供更为复杂的绘制功能，此函数由 glut.dll 来负责解释执行。由于 glut 中的窗口管理函数是不依赖于运行环境的，因此 OpenGL 中的工具库可以在 XWindow,Windows NT, OS/2 等系统下运行，特别适合于开发不需要复杂界面的 OpenGL 示例程序。对于有经验的程序员来说，一般先用 glut 理顺 3D 图形代码，然后再集成为完整的应用程序。</p></blockquote><h3 id="窗口操作函数"><a class="anchor" href="#窗口操作函数">#</a> 窗口操作函数：</h3><pre><code>glutInit();  //窗口初始化函数
+glutInitDisplayMode();  //窗口初始显示模式函数
+glutInitWindowSize();  //窗口大小函数
+glutInitWindowPosition();  //窗口位置函数
+glutMainLoop();
+</code></pre><h3 id="窗口管理"><a class="anchor" href="#窗口管理">#</a> 窗口管理：</h3><pre><code>glutCreateWindow();
+glutCreateSubWindow();
+glutHideWindow();
+glutShowWindow();
+glutSetWindowTitle();
+glutPostRedisplay();
+glutSwapBuffers();
+glutFullScreen();
+glutPositionWindow();
+glutReshapeWindow();
+glutSetWindow();
+glutGetWindow();
+glutPopWindow();
+glutPushWindow();
+glutDestroyWindow();
+glutIconifyWindow();
+glutSetCursor();
+</code></pre><h3 id="重叠层管理"><a class="anchor" href="#重叠层管理">#</a> 重叠层管理:</h3><pre><code>glutEstablishOverlay();
+glutUseLayer();
+glutRemoveOverlay();
+glutPostOverlayRedisplay();
+glutShowOverlay();
+glutHideOverlay();
+</code></pre><h3 id="颜色索引映射表管理"><a class="anchor" href="#颜色索引映射表管理">#</a> 颜色索引映射表管理:</h3><pre><code>glutSetColor();
+glutGetColor();
+glutCopyColormap();
+</code></pre><h3 id="状态检索"><a class="anchor" href="#状态检索">#</a> 状态检索:</h3><pre><code>glutGet();
+glutLayerGet();
+glutDeviceGet();
+glutGetModifiers();
+glutExtensionSupported();
+</code></pre><h3 id="字体绘制"><a class="anchor" href="#字体绘制">#</a> 字体绘制:</h3><pre><code>glutBitmapCharacter();
+glutBitmapWidth();
+glutStrokeCharacter();
+glutStrokeWidth();
+</code></pre><h3 id="几何图形绘制"><a class="anchor" href="#几何图形绘制">#</a> 几何图形绘制：</h3><pre><code>glutSolidSphere();
+glutWireSphere();
+glutSolidCube();
+glutWireCube();
+glutSolidCone();
+glutWireCone();
+glutSolidTorus();
+glutWireTorus();
+glutSolidDodecahedron();glutWireDodecahedron();
+glutSolidOctahedron();
+glutWireOctahedron();
+glutSolidTetrahedron();
+glutWireTetrahedron();
+glutSolieIcosahedron();
+glutWireIcosahedron();
+glutSolidTeapot();
+glutWireTeapotv
+voidglutWireSphere(GLdoubleradius,GLintslices,GLintstacks);//绘制线框球体
+voidglutSolidSphere(GLdoubleradius,GLintslices,GLintstacks);//绘制实心球体
+参数:
+radius:球体的半径
+slices:球体围绕z轴分割的数目
+stacks:球体沿着z轴分割的数目
+绘制中心在模型坐标原点,半径为radius的球体,球体围绕z轴分割slices次,球体沿着z轴分割stacks次
+
+//*******************************************************************************************
+voidglutWireCone(GLdoublebase,GLdoubleheight,GLintslices,GLintstacks);//绘制线框圆锥体
+voidglutSolidCone(GLdoublebase,GLdoubleheight,GLintslices,GLintstacks);//绘制实心圆锥体
+
+参数:
+radius:圆锥体的半径
+height:圆锥体的高
+slices:圆锥体围绕z轴分割的数目
+stacks:圆锥体沿着z轴分割的数目
+圆锥体的轴为z轴方向,它的基底位于z=0的平面内,顶点z=height,圆锥体围绕z轴分割slices个数目,沿着z轴分割stacks个数目.
+
+//*******************************************************************************************
+voidglutWireCube(GLdoublesize);//绘制线框立方体
+voidglutSolidCube(GLdoublesize);//绘制实心立方体
+
+参数:size:立方体的边长
+//*******************************************************************************************
+voidglutWireTorus(GLdoubleinnerRadius,GLdoubleouterRadius,GLintsides,GLintrings);//绘制线框圆环
+voidglutSolidTorus(GLdoubleinnerRadius,GLdoubleouterRadius,GLintsides,GLintrings);//绘制实心圆环
+参数:
+innerRadius:圆环的内半径
+outerRadius:圆环的外半径
+nsides:圆环腔的分割数
+rings:圆环的环线数
+
+//*******************************************************************************************
+voidglutWireDodecahedron(void);//绘制线框十二面体
+voidglutSolidDodecahedron(void);//绘制实心十二面体
+
+//*******************************************************************************************
+voidglutWireTeapot(GLdoublesize);//绘制线框茶壶
+voidglutSolidTeapot(GLdoublesize);//绘制实心茶壶
+参数:size:茶壶的相对大小
+
+//*******************************************************************************************
+voidglutWireOctahedron(void);//绘制线框八面体
+voidglutSolidOctahedron(void);//绘制实心八面体
+
+//*******************************************************************************************
+voidglutWireTetrahedron(void);//绘制线框四面体
+voidglutSolidTetrahedron(void);//绘制实心四面体
+
+//*******************************************************************************************
+voidglutWireIcosahedron(void);//绘制线框二十面体
+voidglutSolidIcosahedron(void);//绘制实心二十面体
+
+如果需要用到长方体那就用glScalef(x,y,z); 做自己想要的长方体，这儿的x,y,z分别对应x,y,z轴的缩放比例
+不过居然没有看到圆柱体的函数。在网上搜索不少人说到的都是用一个aux开头的辅助函数库。但是这有个很大的缺陷，已经被GLUT库代替了
+举个创建2次对象的简单例子:
+
+//创建一个半径为5，在经线和纬线方向细分数为10的球体
+GLUquadricObj *pobj;
+pobj=gluNewQuadric();
+gluQuadricDrawStyle(pobj,GLU_LINE);//确定几何体的绘制模式（GLU_LINE)
+gluSphere(pobj,5,10,10);//创建圆环盘，innerRadius,outerRadius分别指定了内径和外径创建圆柱体创建球体下面是几个用于创建简单的2次曲面的GLU函数：GLUquadricObj* gluNewQuadric();//创建一个新的2次曲面对象，并返回一个指向该对象的指针
+void gluDeleteQuadric(GLUquadricObj*);//删除又2次对象指针指定的2次曲面
+
+void gluSphere(GLUquadricObj* pobj,GLdouble radius,GLint silces,GLint stacks);
+void gluCylinder(GLUquadricObj* pobj,GLdouble baseRadius,GLdouble topRadius,GLint slices,GLint stacks);
+void gluDisk(GLUquadricObj* pobj,GLdouble innerRadius,GLdouble outerRadius,GLint slices,GLint stacks);
+</code></pre><h3 id="回调函数"><a class="anchor" href="#回调函数">#</a> 回调函数：</h3><pre><code>glutDisplayFunc();  //注册一个绘图函数
+glutPostRedisplay();  //标记当前窗口需要重新绘制
+glutReshapeFunc();  //自适应屏幕窗口大小的改变
+glutTimerFunc();  //注册一个定时器的回调函数
+glutKeyboardFunc();   //响应键盘消息
+glutMouseFunc();  //响应鼠标消息
+glutMotionFunc();
+glutIdleFunc();
+glutVisibilityFunc();
+glutSpecialFunc();
+glutOverlayDisplayFunc();
+glutPassiveMotionFunc();
+glutEntryFunc();
+glutSpaceballMotionFunc();
+glutSpaceballRotateFunc();
+glutSpaceballButtonFunc();
+glutButtonBoxFunc();
+glutDialsFunc();
+glutTableMotionFunc();
+glutTableButtonFunc();
+glutMenuStatusFunc();
+</code></pre><h3 id="菜单函数"><a class="anchor" href="#菜单函数">#</a> 菜单函数：</h3><pre><code>glutCreateMenu();
+glutSetMenu();
+glutAddMenuEntry();
+glutAddSubMenu();
+glutAttachMenu();
+glutGetMenu();
+glutDestroyMenu();
+glutChangeToMenuEntry();
+glutChangeToSubMenu();
+glutRemoveMenuItem();
+glutDetachMenu();
+</code></pre><h3 id="程序运行函数-2"><a class="anchor" href="#程序运行函数-2">#</a> 程序运行函数：</h3><pre><code>glutMainLoop();
+</code></pre><h2 id="5windows-专用库"><a class="anchor" href="#5windows-专用库">#</a> 5．Windows 专用库</h2><blockquote><p>针对 windows 平台的扩展，包含有 16 个函数，函数名前缀为 wgl。这部分函数主要用于连接 OpenGL 和 Windows ，以弥补 OpenGL 在文本方面的不足。Windows 专用库只能用于 Windows 环境中。</p></blockquote><h3 id="绘图上下文相关函数"><a class="anchor" href="#绘图上下文相关函数">#</a> 绘图上下文相关函数：</h3><pre><code>wglCreateContext();
+wglDeleteContext();
+wglGetCurrentContent();
+wglGetCurrentDC();
+wglDeleteContent();
+</code></pre><h3 id="文字和文本处理函数"><a class="anchor" href="#文字和文本处理函数">#</a> 文字和文本处理函数：</h3><pre><code>wglUseFontBitmaps();
+wglUseFontOutlines();
+</code></pre><h3 id="覆盖层-地层和主平面层处理函数"><a class="anchor" href="#覆盖层-地层和主平面层处理函数">#</a> 覆盖层、地层和主平面层处理函数：</h3><pre><code>wglCopyContext();
+wglCreateLayerPlane();
+wglDescribeLayerPlane();
+wglReakizeLayerPlatte();
+</code></pre><h3 id="其他函数"><a class="anchor" href="#其他函数">#</a> 其他函数：</h3><pre><code>wglShareLists();
+wglGetProcAddress();
+</code></pre><h2 id="6win32-api-函数库"><a class="anchor" href="#6win32-api-函数库">#</a> 6．Win32 API 函数库</h2><blockquote><p>包含有 6 个函数，函数名无专用前缀，是 win32 扩展函数。这部分函数主要用于处理像素存储格式和双帧缓存；这 6 个函数将替换 Windows GDI 中原有的同样的函数。Win32API 函数库只能用于 Windows 95/98/NT 环境中。</p></blockquote><h2 id="7x-窗口专用库"><a class="anchor" href="#7x-窗口专用库">#</a> 7．X 窗口专用库</h2><blockquote><p>是针对 Unix 和 Linux 的扩展函数。包括渲染上下文、绘制图元、显示列表、纹 理贴图等；</p></blockquote><h3 id="初始化"><a class="anchor" href="#初始化">#</a> 初始化：</h3><pre><code>glXQueryExtension();
+</code></pre><h3 id="渲染上下文函数"><a class="anchor" href="#渲染上下文函数">#</a> 渲染上下文函数：</h3><pre><code>glXCreateContext();
+glXDestroyContext();
+glXCopyContext();
+glXMakeCurrent();
+glXCreateGLXPixmap();
+</code></pre><h3 id="执行"><a class="anchor" href="#执行">#</a> 执行：</h3><pre><code>glXWaitGL();
+glXWaitX();
+</code></pre><h3 id="缓冲区和字体"><a class="anchor" href="#缓冲区和字体">#</a> 缓冲区和字体：</h3><pre><code>glXSwapBuffers();
+glXUseXFont();
+</code></pre><h2 id="8其他扩展库"><a class="anchor" href="#8其他扩展库">#</a> 8．其他扩展库</h2><blockquote><p>这些函数可能是新的 OpenGL 函数，并没有在标准 OpenGL 库中实现，或者它们是用来扩展已存在的 OpenGL 函数的功能。和 glu、glx 和 wgl 一样，这些 OpenGL 扩展是由硬件厂商和厂商组织开发的。OpenGL 扩展 (OpenGLExtention) 包含了大量的扩展 API 函数。 随着硬件的更新，硬件厂商首先向 SGI 申请登记新的扩展，编写规格说明书（specification）。然后按照说明书进行开发扩展程序。不同的 OpenGL 实现（OpenGL Implementation）支持的扩展可能不一样，只有随着某一扩展的推广与应用以及硬件技术的提高该扩展才会在所有的 OpenGL 实现中被给予支持，从而最终成为 OpenGL 标准库的一部分。扩展由 SGI 维护，在 SGI 网站上列出了目前公开的已注册的扩展及其官方说明书。扩展源由扩展函数的后缀来指明 (或使用扩展常量后缀)。例如，后缀 WIN 表明一个符合 Windows 规范的扩展，EXT 或 ARB 后缀表明该扩展由多个卖主定义。</p></blockquote><blockquote><p>下面给出 OpenGL 官方规定的命名规则：</p><p>・ARB – OpenGL Architecture Review Board 正式核准的扩展，往往由厂商开发的扩展发展而来，如果同时存在厂商开发的扩展和 ARB 扩展，应该优先使用 ARB 扩展；</p><p>・EXT – 多家 OpenGL 厂商同意支持的扩展；</p><p>・HP – Hewlett-Packard 惠普；</p><p>• IBM – International Business Machines ；</p><p>• KTX – Kinetix, maker of 3D Studio Max ；</p><p>・INTEL – Intel 公司；</p><p>・NV – NVIDIA 公司；</p><p>• MESA – Brian Paul’s freeware portable OpenGL implementation ；</p><p>・SGI – Silicon Graphics 公司开发的扩展；</p><p>・SGIX – Silicon Graphics (experimental) 公司开发的实验性扩展；</p><p>• SUN – Sun Microsystems；</p><p>• WIN – Microsoft 。</p></blockquote><blockquote><p>由于 OpenGL 扩展在针对不同平台和不同驱动，OpenGL 不可能把所有的接口程序全部放到 gl.h、glx.h、wgl.h 中，而是将这些函数头放在了 glext.h、glxext.h 和 wglext.h 中。这些扩展被看作时 OpenGL 核心库规范的增加和修改。</p></blockquote><h2 id="9opengl-核心函数库"><a class="anchor" href="#9opengl-核心函数库">#</a> 9．OpenGl 核心函数库</h2><pre><code>glAccum 操作累加缓冲区
+glAddSwapHintRectWIN 定义一组被 SwapBuffers 拷贝的三角形
+glAlphaFunc 允许设置 alpha 检测功能
+glAreTexturesResident 决定特定的纹理对象是否常驻在纹理内存中
+glArrayElement 定义一个被用于顶点渲染的数组成分
+glBegin、glEnd 定义一个或一组原始的顶点
+glBindTexture 允许建立一个绑定到目标纹理的有名称的纹理
+glBitmap 绘制一个位图
+glBlendFunc 特殊的像素算法
+glCallList 执行一个显示列表
+glCallLists 执行一列显示列表
+glClear 用当前值清除缓冲区
+glClearAccum 为累加缓冲区指定用于清除的值
+glClearColor 为色彩缓冲区指定用于清除的值
+glClearDepth 为深度缓冲区指定用于清除的值
+glClearStencil 为模板缓冲区指定用于清除的值
+glClipPlane 定义被裁剪的一个平面几何体
+glColor 设置当前色彩
+glColorMask 允许或不允许写色彩组件帧缓冲区
+glColorMaterial 使一个材质色彩指向当前的色彩
+glColorPointer 定义一列色彩
+glColorTableEXT 定义目的一个调色板纹理的调色板的格式和尺寸
+glColorSubTableEXT 定义目的纹理的调色板的一部分被替换
+glCopyPixels 拷贝帧缓冲区里的像素
+glCopyTexImage1D 将像素从帧缓冲区拷贝到一个单空间纹理图象中
+glCopyTexImage2D 将像素从帧缓冲区拷贝到一个双空间纹理图象中
+glCopyTexSubImage1D 从帧缓冲区拷贝一个单空间纹理的子图象
+glCopyTexSubImage2D 从帧缓冲区拷贝一个双空间纹理的子图象
+glCullFace 定义前面或后面是否能被精选
+glDeleteLists 删除相邻一组显示列表
+glDeleteTextures 删除命名的纹理
+glDepthFunc 定义用于深度缓冲区对照的数据
+glDepthMask 允许或不允许写入深度缓冲区
+glDepthRange 定义 z 值从标准的设备坐标映射到窗口坐标
+glDrawArrays 定义渲染多个图元
+glDrawBuffer 定义选择哪个色彩缓冲区被绘制
+glDrawElements 渲染数组数据中的图元
+glDrawPixels 将一组像素写入帧缓冲区
+glEdgeFlag 定义一个边缘标志数组
+glEdgeFlagPointer 定义一个边缘标志数组
+glEnable、glDisable 打开或关闭 OpenGL 的特殊功能
+glEnableClientState、glDisableClientState 分别打开或关闭数组
+glEvalCoord 求解一维和二维贴图
+glEvalMesh1、glEvalMesh2 求解一维和二维点或线的网格
+glEvalPoint1、glEvalPoint2 生成及求解一个网格中的单点
+glFeedbackBuffer 控制反馈模式
+glFinish 等待直到 OpenGL 执行结束
+glFlush 在有限的时间里强制 OpenGL 的执行
+glFogf、glFogi、glFogfv、glFogiv 定义雾参数
+glFrontFace 定义多边形的前面和背面
+glFrustum 当前矩阵乘上透视矩阵
+glGenLists 生成一组空的连续的显示列表
+glGenTextures 生成纹理名称
+glGetBooleanv、glGetDoublev、glGetFloatv、glGetIntegerv 返回值或所选参数值
+glGetClipPlane 返回特定裁减面的系数
+glGetColorTableEXT 从当前目标纹理调色板得到颜色表数据
+glGetColorTableParameterfvEXT、glGetColorTableParameterivEXT 从颜色表中得到调色板参数
+glGetError 返回错误消息
+glGetLightfv、glGetLightiv 返回光源参数值
+glGetMapdv、glGetMapfv、glGetMapiv 返回求值程序参数
+glGetMaterialfv、glGetMaterialiv 返回材质参数
+glGetPixelMapfv、glGetpixelMapuiv、glGetpixelMapusv 返回特定的像素图
+glGetPointerv 返回顶点数据数组的地址
+glGetPolygonStipple 返回多边形的点图案
+glGetString 返回描述当前 OpenGl 连接的字符串
+glGetTexEnvfv 返回纹理环境参数
+glGetTexGendv、glGetTexGenfv、glGetTexGeniv 返回纹理坐标生成参数
+glGetTexImage 返回一个纹理图象
+glGetTexLevelParameterfv、glGetTexLevelParameteriv 返回特定的纹理参数的细节级别
+glGetTexParameterfv、glGetTexParameteriv 返回纹理参数值
+glHint 定义实现特殊的线索
+glIndex 建立当前的色彩索引
+glIndexMask 控制写色彩索引缓冲区里的单独位
+glIndexPointer 定义一个颜色索引数组
+glInitName 初始化名字堆栈
+glInterleavedArrays 同时定义和允许几个在一个大的数组集合里的交替数组
+glIsEnabled 定义性能是否被允许
+glIsList 检测显示列表的存在
+glIsTexture确定一个名字对应一个纹理
+glLightf、glLighti、glLightfv、glLightiv 设置光源参数
+glLightModelf、glLightModeli、glLightModelfv、glLightModeliv 设置光线模型参数
+glLineStipple 设定线点绘图案
+glLineWidth 设定光栅线段的宽
+glListBase 为 glcallList 设定显示列表的基础
+glLoadIdentity 用恒等矩阵替换当前矩阵
+glLoadMatrixd,glLoadMatrif 用一个任意矩阵替换当前矩阵
+glLoadName 将一个名字调入名字堆栈
+glLogicOp 为色彩索引渲染定义一个逻辑像素操作
+glMap1d,glMap1f 定义一个一维求值程序
+glMap2d,glMap2f 定义一个二维求值程序
+glMapGrid1d,glMapGrid1f,glMapgrid2d,glMapGrid2f 定义一个一维或二维网格
+glMaterialf,glMateriali,glMateriafv,glMaterialiv 为光照模型定义材质参数
+glMatrixMode 定义哪一个矩阵是当前矩阵
+glMultMatrixd,glMultMatrixf 用当前矩阵与任意矩阵相乘
+glNewList,glEndList 创建或替换一个显示列表
+glNormal 设定当前顶点法向
+glNormalPointer 设定一个法向数组
+glOrtho 用垂直矩阵与当前矩阵相乘
+glPassThrough 在反馈缓冲区做记号
+glPixelMapfv,glPixelMapuiv,glPixelMapusv 设定像素交换图
+glPixelStoref,glpixelStorei 设定像素存储模式
+glPixelTransferf,glPixelTransferi 设定像素传输模式
+glPixelZoom 设定像素缩放因数
+glPointSize 设定光栅点的直径
+glPolygonMode 选择一个多边形的光栅模式
+glPolygonOffset 设定 OpenGL 用于计算深度值的比例和单元
+glPolygonStipple 设定多边形填充图案
+glPrioritizeTextures 设定纹理固定的优先级
+glPushAttrib,glPopAttrib 属性堆栈的压入和弹出操作
+glPushClientAttrib,glPopClientAttrib 在客户属性堆栈存储和恢复客户状态值
+glPushmatrix,glPopMatrix 矩阵堆栈的压入和弹出操作
+glPushName,glPopName 名字堆栈的压入和弹出操作
+glRasterPos 定义像素操作的光栅位置
+glreadBuffer 为像素选择一个源色彩缓冲区
+glReadPixels从帧缓冲区读取一组数据
+glRectd,glRectf,glRecti,glRects,glRectdv,glRectfv,glRectiv,glRectsv 绘制一个三角形
+glRenderMode 定义光栅模式
+glRotated,glRotatef 将旋转矩阵与当前矩阵相乘
+glScaled,glScalef 将一般的比例矩阵与当前矩阵相乘
+glScissor 定义裁减框
+glSelectBuffer 为选择模式值建立一个缓冲区
+glShadeModel 选择平直或平滑着色
+glStencilFunc 为模板测试设置功能和参照值
+glStencilMask控制在模板面写单独的位
+glStencilOp 设置激活模式测试
+glTexCoord 设置当前纹理坐标
+glTexCoordPointer 定义一个纹理坐标数组
+glTexEnvf,glTexEnvi,glTexEnvfv,glTexEnviv 设定纹理坐标环境参数
+glTexGend,glTexgenf,glTexGendv,glTexGenfv,glTexGeniv 控制纹理坐标的生成
+glTexImage1D 定义一个一维的纹理图象
+glTexImage2D 定义一个二维的纹理图 glTexParameterf,glTexParameteri,glTexParameterfv,glTexParameteriv 设置纹理参数
+glTexSubImage1D 定义一个存在的一维纹理图像的一部分,但不能定义新的纹理
+glTexSubImage2D 定义一个存在的二维纹理图像的一部分,但不能定义新的纹理
+glTranslated,glTranslatef 将变换矩阵与当前矩阵相乘
+glVertex 定义一个顶点
+glVertexPointer 设定一个顶点数据数组
+glViewport 设置视窗
+</code></pre><h2 id="10-opengl-应用函数库"><a class="anchor" href="#10-opengl-应用函数库">#</a> 10 . OpenGL 应用函数库</h2><pre><code>gluBeginCurve,gluEndCurve 定义一条不一至的有理的 NURBS 曲线
+gluBeginPolygon,gluEndPolygon 定义一个非凸多边形
+gluBeginSurface,gluEndSurface 定义一个 NURBS 曲线
+gluBeginTrim,gluEndTrim 定义一个 NURBS 整理循环
+gluBuild1Dmipmaps 建立一维多重映射
+gluBuild2Dmipmaps 建立二维多重映射
+gluCylinder 绘制一个圆柱
+gluDeleteNurbsRenderer 删除一个 NURBS 对象
+gluDeleQuadric 删除一个二次曲面对象
+gluDeleteTess 删除一个镶嵌对象
+gluDisk 绘制一个盘子
+gluErrorString 根据 OpenGL 或 GLU 错误代码产生错误字符串
+gluGetNutbsProperty 得到一个 NURBS 属性
+gluGetString 得到一个描述 GLU 版本号或支持 GLU 扩展调用的字符串
+gluGetTessProperty 得到一个镶嵌对象
+gluLoadSamplingMatrices 加载 NUMRBS 例子和精选矩阵
+gluLookAt 设定一个变换视点
+gluNewNurbsRenderer 创建一个 NURBS 对象
+gluNewQuadric 建立一个二次曲面对象
+gluNewTess 建立一个镶嵌对象
+gluNextContour 为其他轮廓的开始做标记
+gluNurbsCallback 为 NURBS 对象设定一个回调
+gluNnrbsCurve 设定一个 NuRBS 曲线的形状
+gluNurbsProperty 设定一个 NURBS 属性
+gluNurbsSurface 定义一个 NURBS 表面的形状
+gluOrtho2D 定义一个二位正交投影矩阵
+gluPartialDisk绘制一个盘子的弧
+gluPerspective 设置一个透视投影矩阵
+gluPickMatrix 定义一个拾取区间
+gluProject 将对象坐标映射为窗口坐标
+gluPwlCurve 描述一个分段线性 NURBS 修剪曲线
+gluQuadricCallback 为二次曲面对象定义一个回调
+gluQuadricDrawStyle 为二次曲面设定合适的绘制风格
+gluQuadricNormals 定义二次曲面所用的法向的种类
+gluQuadricOrientation 定义二次曲面内部或外部方向
+gluQuadricTexture 定义是否带二次其面做纹理帖图
+gluScaleImage 将图象变换为任意尺寸
+gluSphere 绘制一个球体
+gluTessBeginContour,gluTessEndContour 划定一个边界描述
+gluTessBeginPolygon,gluTessEndPolygon 划定一个多边形描述
+gluTessCallback 为镶嵌对象定义一个回调
+gluTessNormal 为一个多边行形定义法向
+gluTessProperty 设置镶嵌对象的属性
+gluTessVertex 定义在一个多边形上的顶点
+gluUnProject 将窗口坐标映射为对象坐标
+</code></pre><h2 id="11-相关下载本资源收集自网络如有侵权请联系站长删除"><a class="anchor" href="#11-相关下载本资源收集自网络如有侵权请联系站长删除">#</a> 11、相关下载（本资源收集自网络，如有侵权，请联系站长删除）</h2><p>1.OpenGL 参考手册电子书（旧版）：<span class="exturl" data-url="aHR0cHM6Ly93d3cubGF2ZW5kZXJkaC5jbi9maWxlcy9vcGVuZ2xib29rLnBkZg==">下载链接</span></p><p>2.OpenGL4.5 官方英文参考手册：<span class="exturl" data-url="aHR0cHM6Ly93d3cubGF2ZW5kZXJkaC5jbi9maWxlcy9vcGVuZ2w0LjUucGRm">下载链接</span></p><h2 id="12-相关链接"><a class="anchor" href="#12-相关链接">#</a> 12、 相关链接</h2><p>1.OpenGL 中文手册：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vd2lraTNkL3Av">https://www.cnblogs.com/wiki3d/p/</span></p><p>2. 腾讯云 difcareer 的技术笔记：OpenGL API 简介:<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xMTkzNDYz">https://cloud.tencent.com/developer/article/1193463</span></p><p>3.freeglut 官方文档：<span class="exturl" data-url="aHR0cDovL2ZyZWVnbHV0LnNvdXJjZWZvcmdlLm5ldC9kb2NzL2FwaS5waHA=">http://freeglut.sourceforge.net/docs/api.php</span></p><p>4.OpenGL4.5 官方文档：<span class="exturl" data-url="aHR0cHM6Ly93d3cua2hyb25vcy5vcmcvcmVnaXN0cnkvT3BlbkdMLVJlZnBhZ2VzL2dsNC8=">https://www.khronos.org/registry/OpenGL-Refpages/gl4/</span></p><p>5.OpenGL4 官方文档：<span class="exturl" data-url="aHR0cHM6Ly93d3cua2hyb25vcy5vcmcvb3BlbmdsL3dpa2kvQ2F0ZWdvcnk6Q29yZV9BUElfUmVmZXJlbmNl">https://www.khronos.org/opengl/wiki/Category:Core_API_Reference</span></p><p>6.OpenGL2.1 官方文档：<span class="exturl" data-url="aHR0cHM6Ly93d3cua2hyb25vcy5vcmcvcmVnaXN0cnkvT3BlbkdMLVJlZnBhZ2VzL2dsMi4xLw==">https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/</span></p><div class="tags"><a href="/tags/OpenGL/" rel="tag"><i class="ic i-tag"></i> OpenGL</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2021-07-22 22:29:01" itemprop="dateModified" datetime="2021-07-22T22:29:01+08:00">2021-07-22</time> </span><span id="2020/11/07/20201107opengl/" class="item leancloud_visitors" data-flag-title="OpenGL 相关函数资料汇总" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img data-src="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/images/wechatpay.png" alt="Lavender 微信支付"><p>微信支付</p></div><div><img data-src="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/images/alipay.png" alt="Lavender 支付宝"><p>支付宝</p></div><div><img data-src="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/images/paypal.png" alt="Lavender 贝宝"><p>贝宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>Lavender <i class="ic i-at"><em>@</em></i>lavender</li><li class="link"><strong>本文链接：</strong> <a href="https://lavender816.github.io/2020/11/07/20201107opengl/" title="OpenGL 相关函数资料汇总">https://lavender816.github.io/2020/11/07/20201107opengl/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2020/11/02/20201102/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?378116" title="JAVA程序设计基础作业三（编写输出球体、立方体、圆柱体体积）"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> 学习</span><h3>JAVA程序设计基础作业三（编写输出球体、立方体、圆柱体体积）</h3></a></div><div class="item right"><a href="/2020/11/09/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9ABMP%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%88%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%A8%8B%E5%BA%8F%EF%BC%89/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;www.dmoe.cc&#x2F;random.php?545531" title="数字图像处理：BMP图像处理（控制台程序）"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i> 图形学</span><h3>数字图像处理：BMP图像处理（控制台程序）</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#opengl-%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB"><span class="toc-number">1.</span> <span class="toc-text">OpenGL 相关函数资料汇总</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-opengl%E6%A0%B8%E5%BF%83%E5%BA%93"><span class="toc-number">1.1.</span> <span class="toc-text">1、OpenGL 核心库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2"><span class="toc-number">1.1.1.</span> <span class="toc-text">绘制几何图形：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.1.2.</span> <span class="toc-text">坐标转换：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E6%93%8D%E4%BD%9C-%E5%87%A0%E4%BD%95%E5%8F%98%E6%8D%A2%E5%92%8C%E6%8A%95%E5%BD%B1%E5%8F%98%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">矩阵操作、几何变换和投影变换的函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2-%E5%85%89%E7%85%A7%E5%92%8C%E6%9D%90%E8%B4%A8%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.4.</span> <span class="toc-text">颜色、光照和材质的函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E5%88%97%E8%A1%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.5.</span> <span class="toc-text">显示列表函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B9%E7%90%86%E6%98%A0%E5%B0%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.6.</span> <span class="toc-text">纹理映射函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A7%E7%BC%93%E5%AD%98%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.7.</span> <span class="toc-text">帧缓存操作:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%95%88%E6%9E%9C%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.8.</span> <span class="toc-text">特殊效果函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E6%A0%85%E5%8C%96-%E5%83%8F%E7%B4%A0%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.9.</span> <span class="toc-text">光栅化、像素操作函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E4%B8%8E%E5%8F%8D%E9%A6%88%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.10.</span> <span class="toc-text">选择与反馈函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B2%E7%BA%BF%E4%B8%8E%E6%9B%B2%E9%9D%A2%E7%9A%84%E7%BB%98%E5%88%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.11.</span> <span class="toc-text">曲线与曲面的绘制函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.12.</span> <span class="toc-text">查询函数:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2opengl-%E5%AE%9E%E7%94%A8%E5%BA%93-the-opengl-utility-library-glu"><span class="toc-number">1.2.</span> <span class="toc-text">2．OpenGL 实用库 The OpenGL Utility Library (GLU)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.1.</span> <span class="toc-text">辅助纹理贴图函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2%E5%92%8C%E6%8A%95%E5%BD%B1%E5%8F%98%E6%8D%A2%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.2.</span> <span class="toc-text">坐标转换和投影变换函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%BE%B9%E5%BD%A2%E9%95%B6%E5%B5%8C%E5%B7%A5%E5%85%B7-%E7%BD%91%E6%A0%BC%E5%8C%96"><span class="toc-number">1.2.3.</span> <span class="toc-text">多边形镶嵌工具、网格化：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E6%9B%B2%E9%9D%A2%E7%BB%98%E5%88%B6%E5%B7%A5%E5%85%B7"><span class="toc-number">1.2.4.</span> <span class="toc-text">二次曲面绘制工具：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%98%E5%88%B6-nurbs-%E6%9B%B2%E7%BA%BF%E5%92%8C%E6%9B%B2%E9%9D%A2"><span class="toc-number">1.2.5.</span> <span class="toc-text">绘制 NURBS 曲线和曲面：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E6%98%A0%E5%B0%84"><span class="toc-number">1.2.6.</span> <span class="toc-text">多重映射:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%87%BD%E6%95%B0-2"><span class="toc-number">1.2.7.</span> <span class="toc-text">查询函数:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E5%8F%8D%E9%A6%88%E5%B7%A5%E5%85%B7"><span class="toc-number">1.2.8.</span> <span class="toc-text">错误反馈工具：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3opengl-%E8%BE%85%E5%8A%A9%E5%BA%93"><span class="toc-number">1.3.</span> <span class="toc-text">3．OpenGL 辅助库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E9%80%80%E5%87%BA%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.1.</span> <span class="toc-text">窗口初始化和退出函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E5%A4%84%E7%90%86%E5%92%8C%E6%97%B6%E9%97%B4%E8%BE%93%E5%85%A5%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.2.</span> <span class="toc-text">窗口处理和时间输入函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%E7%B4%A2%E5%BC%95%E8%A3%85%E5%85%A5%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.3.</span> <span class="toc-text">颜色索引装入函数:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%BB%B4%E7%89%A9%E4%BD%93%E7%BB%98%E5%88%B6%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.4.</span> <span class="toc-text">三维物体绘制函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E8%BF%87%E7%A8%8B%E7%AE%A1%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.5.</span> <span class="toc-text">背景过程管理函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.6.</span> <span class="toc-text">程序运行函数：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4opengl-%E5%B7%A5%E5%85%B7%E5%BA%93-opengl-utility-toolkit"><span class="toc-number">1.4.</span> <span class="toc-text">4．OpenGL 工具库 OpenGL Utility Toolkit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.1.</span> <span class="toc-text">窗口操作函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">窗口管理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%8F%A0%E5%B1%82%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.3.</span> <span class="toc-text">重叠层管理:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%E7%B4%A2%E5%BC%95%E6%98%A0%E5%B0%84%E8%A1%A8%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.4.</span> <span class="toc-text">颜色索引映射表管理:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%A3%80%E7%B4%A2"><span class="toc-number">1.4.5.</span> <span class="toc-text">状态检索:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E7%BB%98%E5%88%B6"><span class="toc-number">1.4.6.</span> <span class="toc-text">字体绘制:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2%E7%BB%98%E5%88%B6"><span class="toc-number">1.4.7.</span> <span class="toc-text">几何图形绘制：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.8.</span> <span class="toc-text">回调函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8F%9C%E5%8D%95%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.9.</span> <span class="toc-text">菜单函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%87%BD%E6%95%B0-2"><span class="toc-number">1.4.10.</span> <span class="toc-text">程序运行函数：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5windows-%E4%B8%93%E7%94%A8%E5%BA%93"><span class="toc-number">1.5.</span> <span class="toc-text">5．Windows 专用库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%98%E5%9B%BE%E4%B8%8A%E4%B8%8B%E6%96%87%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">绘图上下文相关函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E5%92%8C%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.2.</span> <span class="toc-text">文字和文本处理函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%86%E7%9B%96%E5%B1%82-%E5%9C%B0%E5%B1%82%E5%92%8C%E4%B8%BB%E5%B9%B3%E9%9D%A2%E5%B1%82%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.3.</span> <span class="toc-text">覆盖层、地层和主平面层处理函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.4.</span> <span class="toc-text">其他函数：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6win32-api-%E5%87%BD%E6%95%B0%E5%BA%93"><span class="toc-number">1.6.</span> <span class="toc-text">6．Win32 API 函数库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7x-%E7%AA%97%E5%8F%A3%E4%B8%93%E7%94%A8%E5%BA%93"><span class="toc-number">1.7.</span> <span class="toc-text">7．X 窗口专用库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.7.1.</span> <span class="toc-text">初始化：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E4%B8%8A%E4%B8%8B%E6%96%87%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.2.</span> <span class="toc-text">渲染上下文函数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C"><span class="toc-number">1.7.3.</span> <span class="toc-text">执行：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E5%92%8C%E5%AD%97%E4%BD%93"><span class="toc-number">1.7.4.</span> <span class="toc-text">缓冲区和字体：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E5%85%B6%E4%BB%96%E6%89%A9%E5%B1%95%E5%BA%93"><span class="toc-number">1.8.</span> <span class="toc-text">8．其他扩展库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9opengl-%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0%E5%BA%93"><span class="toc-number">1.9.</span> <span class="toc-text">9．OpenGl 核心函数库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-opengl-%E5%BA%94%E7%94%A8%E5%87%BD%E6%95%B0%E5%BA%93"><span class="toc-number">1.10.</span> <span class="toc-text">10 . OpenGL 应用函数库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E7%9B%B8%E5%85%B3%E4%B8%8B%E8%BD%BD%E6%9C%AC%E8%B5%84%E6%BA%90%E6%94%B6%E9%9B%86%E8%87%AA%E7%BD%91%E7%BB%9C%E5%A6%82%E6%9C%89%E4%BE%B5%E6%9D%83%E8%AF%B7%E8%81%94%E7%B3%BB%E7%AB%99%E9%95%BF%E5%88%A0%E9%99%A4"><span class="toc-number">1.11.</span> <span class="toc-text">11、相关下载（本资源收集自网络，如有侵权，请联系站长删除）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5"><span class="toc-number">1.12.</span> <span class="toc-text">12、 相关链接</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/2020/10/29/%E6%89%AB%E6%8F%8F%E7%BA%BF%E5%A1%AB%E5%85%85%E7%AE%97%E6%B3%9520201029/" rel="bookmark" title="扫描线种子多边形填充算法(MFC）">扫描线种子多边形填充算法(MFC）</a></li><li><a href="/2020/11/02/20201102/" rel="bookmark" title="JAVA程序设计基础作业三（编写输出球体、立方体、圆柱体体积）">JAVA程序设计基础作业三（编写输出球体、立方体、圆柱体体积）</a></li><li class="active"><a href="/2020/11/07/20201107opengl/" rel="bookmark" title="OpenGL 相关函数资料汇总">OpenGL 相关函数资料汇总</a></li><li><a href="/2020/11/09/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9ABMP%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%88%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%A8%8B%E5%BA%8F%EF%BC%89/" rel="bookmark" title="数字图像处理：BMP图像处理（控制台程序）">数字图像处理：BMP图像处理（控制台程序）</a></li><li><a href="/2020/11/10/20201110clock/" rel="bookmark" title="HTML实现简单指针式钟表">HTML实现简单指针式钟表</a></li><li><a href="/2020/11/10/20201110javaex2/" rel="bookmark" title="JAVA实验二：掌握继承与接口的原理和使用方法">JAVA实验二：掌握继承与接口的原理和使用方法</a></li><li><a href="/2020/11/11/20201110javaex1/" rel="bookmark" title="JAVA实验一：掌握继承与方法重写">JAVA实验一：掌握继承与方法重写</a></li><li><a href="/2020/11/12/20201112%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%88%86%E5%89%B2/" rel="bookmark" title="梁友栋－barsky算法实现直线段相对于给定窗口的裁剪(OpenGL)">梁友栋－barsky算法实现直线段相对于给定窗口的裁剪(OpenGL)</a></li><li><a href="/2020/11/13/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/" rel="bookmark" title="Hexo 搭建个人博客（一）">Hexo 搭建个人博客（一）</a></li><li><a href="/2020/11/13/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="bookmark" title="Hexo搭建个人博客（二）（转载）">Hexo搭建个人博客（二）（转载）</a></li><li><a href="/2020/11/14/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89/" rel="bookmark" title="Hexo搭建个人博客（三）">Hexo搭建个人博客（三）</a></li><li><a href="/2020/11/14/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89/" rel="bookmark" title="Hexo搭建个人博客（四）">Hexo搭建个人博客（四）</a></li><li><a href="/2020/11/15/20201110javaex3/" rel="bookmark" title="JAVA实验三：掌握泛型类的原理和使用方法">JAVA实验三：掌握泛型类的原理和使用方法</a></li><li><a href="/2020/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E5%9F%BA%E4%BA%8EOpenGL%E7%9A%84%E5%9B%BE%E5%BD%A2%E5%AD%A6%E7%BC%96%E7%A8%8B%E5%88%9D%E6%8E%A2/" rel="bookmark" title="图形学实验三：基于OpenGL的图形学编程初探">图形学实验三：基于OpenGL的图形学编程初探</a></li><li><a href="/2020/11/21/20201121%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%85%B3%E9%94%AE%E5%B8%A7%E6%8F%90%E5%8F%96%E4%B8%8E%E5%88%86%E5%89%B2/" rel="bookmark" title="数字视频技术及应用实验一：关键帧提取与分割">数字视频技术及应用实验一：关键帧提取与分割</a></li><li><a href="/2020/11/22/20201110javwork3/" rel="bookmark" title="JAVA程序设计基础作业四(计算字符串子串）">JAVA程序设计基础作业四(计算字符串子串）</a></li><li><a href="/2020/12/07/20201207javaex4/" rel="bookmark" title="JAVA实验四：输入流和输出流">JAVA实验四：输入流和输出流</a></li><li><a href="/2020/12/07/20201207javaex5/" rel="bookmark" title="JAVA实验五： 图形用户界面">JAVA实验五： 图形用户界面</a></li><li><a href="/2020/12/08/20201201%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%BA%8C%EF%BC%9A%E8%A7%86%E9%A2%91%E5%A2%9E%E5%BC%BA%E4%B8%8E%E6%92%AD%E6%94%BE%E6%8E%A7%E5%88%B6/" rel="bookmark" title="数字视频技术及应用实验二：视频增强与播放控制">数字视频技术及应用实验二：视频增强与播放控制</a></li><li><a href="/2020/12/08/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E6%8A%80%E6%9C%AF%E5%8F%8A%E5%BA%94%E7%94%A8%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E8%BF%90%E5%8A%A8%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/" rel="bookmark" title="数字视频技术及应用实验三：运动目标检测">数字视频技术及应用实验三：运动目标检测</a></li><li><a href="/2020/12/09/20201209javaex6/" rel="bookmark" title="JAVA实验六：线程">JAVA实验六：线程</a></li><li><a href="/2020/12/09/20201209%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%92%8C%E6%95%B0%E6%8D%AE%E6%93%8D%E7%BA%B5/" rel="bookmark" title="数据库实验三：数据库查询和数据操纵">数据库实验三：数据库查询和数据操纵</a></li><li><a href="/2021/04/10/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/" rel="bookmark" title="OpenGL 导入模型">OpenGL 导入模型</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="Lavender" data-src="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/images/avatar.png"><p class="name" itemprop="name">Lavender</p><div class="description" itemprop="description"></div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">27</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">14</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">12</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xhdmVuZGVyODE2" title="https:&#x2F;&#x2F;github.com&#x2F;lavender816"><i class="ic i-github"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTQ0MDEyNTE0OA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;440125148"><i class="ic i-cloud-music"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2020/11/02/20201102/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2020/11/09/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%9ABMP%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%EF%BC%88%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%A8%8B%E5%BA%8F%EF%BC%89/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/JAVA/" title="分类于 JAVA">JAVA</a> <i class="ic i-angle-right"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="分类于 学习">学习</a></div><span><a href="/2020/11/11/20201110javaex1/" title="JAVA实验一：掌握继承与方法重写">JAVA实验一：掌握继承与方法重写</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2021/07/08/hello-world/" title="Hello World">Hello World</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/OpenGL/" title="分类于 OpenGL">OpenGL</a> <i class="ic i-angle-right"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="分类于 学习">学习</a></div><span><a href="/2020/11/07/20201107opengl/" title="OpenGL 相关函数资料汇总">OpenGL 相关函数资料汇总</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/HTML/" title="分类于 HTML">HTML</a> <i class="ic i-angle-right"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="分类于 学习">学习</a></div><span><a href="/2020/11/10/20201110clock/" title="HTML实现简单指针式钟表">HTML实现简单指针式钟表</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="分类于 学习">学习</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/Hexo/" title="分类于 Hexo">Hexo</a></div><span><a href="/2020/11/13/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/" title="Hexo搭建个人博客（二）（转载）">Hexo搭建个人博客（二）（转载）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/OpenGL/" title="分类于 OpenGL">OpenGL</a> <i class="ic i-angle-right"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="分类于 学习">学习</a></div><span><a href="/2021/04/10/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/" title="OpenGL 导入模型">OpenGL 导入模型</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/JAVA/" title="分类于 JAVA">JAVA</a> <i class="ic i-angle-right"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="分类于 学习">学习</a></div><span><a href="/2020/11/02/20201102/" title="JAVA程序设计基础作业三（编写输出球体、立方体、圆柱体体积）">JAVA程序设计基础作业三（编写输出球体、立方体、圆柱体体积）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="分类于 学习">学习</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a></div><span><a href="/2020/12/09/20201209%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%92%8C%E6%95%B0%E6%8D%AE%E6%93%8D%E7%BA%B5/" title="数据库实验三：数据库查询和数据操纵">数据库实验三：数据库查询和数据操纵</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/C/" title="分类于 C++">C++</a> <i class="ic i-angle-right"></i> <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="分类于 学习">学习</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" title="分类于 数字视频">数字视频</a></div><span><a href="/2020/11/21/20201121%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%85%B3%E9%94%AE%E5%B8%A7%E6%8F%90%E5%8F%96%E4%B8%8E%E5%88%86%E5%89%B2/" title="数字视频技术及应用实验一：关键帧提取与分割">数字视频技术及应用实验一：关键帧提取与分割</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" title="分类于 程序员">程序员</a> <i class="ic i-angle-right"></i> <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/github/" title="分类于 github">github</a> <i class="ic i-angle-right"></i> <a href="/categories/%E6%8A%80%E5%B7%A7/" title="分类于 技巧">技巧</a></div><span><a href="/2021/04/02/github%E7%9B%B8%E5%85%B3/" title="Github提速&#x2F;下载">Github提速/下载</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2010 – <span itemprop="copyrightYear">2021</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">Lavender @ Lavender's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">146k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">2:13</span></div><span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span><br><script>function createtime(){var n=new Date("2020/09/19 00:00:00");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="本站已安全运行 "+dnum+" 天 ",document.getElementById("times").innerHTML=hnum+" 小时 "+mnum+" 分 "+snum+" 秒"}var now=new Date;setInterval("createtime()",250)</script><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"2020/11/07/20201107opengl/",favicon:{show:"（●´3｀●）やれやれだぜ",hide:"(´Д｀)大変だ！"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="//cdn.jsdelivr.net/gh/lavender816/lavender816.github.io@latest/js/app.js?v=0.2.5"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"https://cdn.jsdelivr.net/npm/live2d-widget-model-koharu@latest/assets/koharu.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
