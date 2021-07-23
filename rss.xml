@@ -33,9 +33,9 @@
             <guid isPermalink="true">https://lavender816.github.io/2021/04/10/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/</guid>
             <title>OpenGL 导入模型</title>
             <link>https://lavender816.github.io/2021/04/10/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="OpenGL" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/OpenGL/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="OpenGL" scheme="https://lavender816.github.io/categories/coding/OpenGL/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
             <category term="OpenGL" scheme="https://lavender816.github.io/tags/OpenGL/" />
             <pubDate>Sat, 10 Apr 2021 23:50:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h1&gt;
@@ -154,8 +154,8 @@
             <guid isPermalink="true">https://lavender816.github.io/2021/04/02/github%E7%9B%B8%E5%85%B3/</guid>
             <title>Github提速/下载</title>
             <link>https://lavender816.github.io/2021/04/02/github%E7%9B%B8%E5%85%B3/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="github" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/github/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="github" scheme="https://lavender816.github.io/categories/coding/github/" />
             <category term="技巧" scheme="https://lavender816.github.io/categories/%E6%8A%80%E5%B7%A7/" />
             <category term="github" scheme="https://lavender816.github.io/tags/github/" />
             <pubDate>Fri, 02 Apr 2021 17:50:09 +0800</pubDate>
@@ -305,7 +305,7 @@
             <guid isPermalink="true">https://lavender816.github.io/2020/12/14/20201214/</guid>
             <title>分享一组唯美画风图</title>
             <link>https://lavender816.github.io/2020/12/14/20201214/</link>
-            <category term="心情" scheme="https://lavender816.github.io/categories/%E5%BF%83%E6%83%85/" />
+            <category term="心情" scheme="https://lavender816.github.io/categories/mind/" />
             <category term="心情" scheme="https://lavender816.github.io/tags/%E5%BF%83%E6%83%85/" />
             <pubDate>Mon, 14 Dec 2020 23:33:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;分享一组唯美画风图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分享一组唯美画风图&#34;&gt;#&lt;/a&gt; 分享一组唯美画风图&lt;/h1&gt;
@@ -349,9 +349,9 @@
             <guid isPermalink="true">https://lavender816.github.io/2020/12/09/20201209%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%92%8C%E6%95%B0%E6%8D%AE%E6%93%8D%E7%BA%B5/</guid>
             <title>数据库实验三：数据库查询和数据操纵</title>
             <link>https://lavender816.github.io/2020/12/09/20201209%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%92%8C%E6%95%B0%E6%8D%AE%E6%93%8D%E7%BA%B5/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="数据库" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="数据库" scheme="https://lavender816.github.io/categories/coding/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
             <category term="SQL" scheme="https://lavender816.github.io/tags/SQL/" />
             <pubDate>Wed, 09 Dec 2020 11:51:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数据库实验三数据库查询和数据操纵&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库实验三数据库查询和数据操纵&#34;&gt;#&lt;/a&gt; 数据库实验三：数据库查询和数据操纵&lt;/h1&gt;
@@ -411,9 +411,9 @@
             <guid isPermalink="true">https://lavender816.github.io/2020/12/09/20201209javaex6/</guid>
             <title>JAVA实验六：线程</title>
             <link>https://lavender816.github.io/2020/12/09/20201209javaex6/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="JAVA" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/JAVA/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="JAVA" scheme="https://lavender816.github.io/categories/coding/JAVA/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
             <category term="JAVA" scheme="https://lavender816.github.io/tags/JAVA/" />
             <pubDate>Wed, 09 Dec 2020 00:22:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;java实验六线程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java实验六线程&#34;&gt;#&lt;/a&gt; JAVA 实验六：线程&lt;/h1&gt;
@@ -440,10 +440,10 @@
             <guid isPermalink="true">https://lavender816.github.io/2020/12/08/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E6%8A%80%E6%9C%AF%E5%8F%8A%E5%BA%94%E7%94%A8%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E8%BF%90%E5%8A%A8%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</guid>
             <title>数字视频技术及应用实验三：运动目标检测</title>
             <link>https://lavender816.github.io/2020/12/08/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E6%8A%80%E6%9C%AF%E5%8F%8A%E5%BA%94%E7%94%A8%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E8%BF%90%E5%8A%A8%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="C++" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/C/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="数字视频" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="C++" scheme="https://lavender816.github.io/categories/coding/cpp/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="数字视频" scheme="https://lavender816.github.io/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="C++" scheme="https://lavender816.github.io/tags/C/" />
             <pubDate>Tue, 08 Dec 2020 20:11:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数字视频技术及应用实验三运动目标检测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字视频技术及应用实验三运动目标检测&#34;&gt;#&lt;/a&gt; 数字视频技术及应用实验三：运动目标检测&lt;/h1&gt;
@@ -470,10 +470,10 @@
             <guid isPermalink="true">https://lavender816.github.io/2020/12/08/20201201%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%BA%8C%EF%BC%9A%E8%A7%86%E9%A2%91%E5%A2%9E%E5%BC%BA%E4%B8%8E%E6%92%AD%E6%94%BE%E6%8E%A7%E5%88%B6/</guid>
             <title>数字视频技术及应用实验二：视频增强与播放控制</title>
             <link>https://lavender816.github.io/2020/12/08/20201201%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%BA%8C%EF%BC%9A%E8%A7%86%E9%A2%91%E5%A2%9E%E5%BC%BA%E4%B8%8E%E6%92%AD%E6%94%BE%E6%8E%A7%E5%88%B6/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="C++" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/C/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="数字视频" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="C++" scheme="https://lavender816.github.io/categories/coding/cpp/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="数字视频" scheme="https://lavender816.github.io/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="C++" scheme="https://lavender816.github.io/tags/C/" />
             <pubDate>Tue, 08 Dec 2020 20:09:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数字视频技术及应用实验二视频增强与播放控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字视频技术及应用实验二视频增强与播放控制&#34;&gt;#&lt;/a&gt; 数字视频技术及应用实验二：视频增强与播放控制&lt;/h1&gt;
@@ -509,9 +509,9 @@
             <guid isPermalink="true">https://lavender816.github.io/2020/12/07/20201207javaex5/</guid>
             <title>JAVA实验五： 图形用户界面</title>
             <link>https://lavender816.github.io/2020/12/07/20201207javaex5/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="JAVA" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/JAVA/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="JAVA" scheme="https://lavender816.github.io/categories/coding/JAVA/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
             <category term="JAVA" scheme="https://lavender816.github.io/tags/JAVA/" />
             <pubDate>Mon, 07 Dec 2020 21:54:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;java实验五-图形用户界面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java实验五-图形用户界面&#34;&gt;#&lt;/a&gt; JAVA 实验五： 图形用户界面&lt;/h1&gt;
@@ -564,9 +564,9 @@
             <guid isPermalink="true">https://lavender816.github.io/2020/12/07/20201207javaex4/</guid>
             <title>JAVA实验四：输入流和输出流</title>
             <link>https://lavender816.github.io/2020/12/07/20201207javaex4/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="JAVA" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/JAVA/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="JAVA" scheme="https://lavender816.github.io/categories/coding/JAVA/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
             <category term="JAVA" scheme="https://lavender816.github.io/tags/JAVA/" />
             <pubDate>Mon, 07 Dec 2020 21:53:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;java实验四输入流和输出流&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java实验四输入流和输出流&#34;&gt;#&lt;/a&gt; JAVA 实验四：输入流和输出流&lt;/h1&gt;
@@ -623,9 +623,9 @@ String s1=new String(b);&lt;br /&gt;
             <guid isPermalink="true">https://lavender816.github.io/2020/11/22/20201110javwork3/</guid>
             <title>JAVA程序设计基础作业四(计算字符串子串）</title>
             <link>https://lavender816.github.io/2020/11/22/20201110javwork3/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="JAVA" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/JAVA/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="JAVA" scheme="https://lavender816.github.io/categories/coding/JAVA/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
             <category term="JAVA" scheme="https://lavender816.github.io/tags/JAVA/" />
             <pubDate>Sun, 22 Nov 2020 15:34:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;java程序设计基础作业四&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java程序设计基础作业四&#34;&gt;#&lt;/a&gt; JAVA 程序设计基础作业四&lt;/h1&gt;
@@ -659,10 +659,10 @@ String s1=new String(b);&lt;br /&gt;
             <guid isPermalink="true">https://lavender816.github.io/2020/11/21/20201121%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%85%B3%E9%94%AE%E5%B8%A7%E6%8F%90%E5%8F%96%E4%B8%8E%E5%88%86%E5%89%B2/</guid>
             <title>数字视频技术及应用实验一：关键帧提取与分割</title>
             <link>https://lavender816.github.io/2020/11/21/20201121%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%85%B3%E9%94%AE%E5%B8%A7%E6%8F%90%E5%8F%96%E4%B8%8E%E5%88%86%E5%89%B2/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="C++" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/C/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="数字视频" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="C++" scheme="https://lavender816.github.io/categories/coding/cpp/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="数字视频" scheme="https://lavender816.github.io/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="C++" scheme="https://lavender816.github.io/tags/C/" />
             <pubDate>Sat, 21 Nov 2020 21:52:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数字视频技术及应用实验一关键帧提取与分割&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字视频技术及应用实验一关键帧提取与分割&#34;&gt;#&lt;/a&gt; 数字视频技术及应用实验一：关键帧提取与分割&lt;/h1&gt;
@@ -726,10 +726,10 @@ String s1=new String(b);&lt;br /&gt;
             <guid isPermalink="true">https://lavender816.github.io/2020/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E5%9F%BA%E4%BA%8EOpenGL%E7%9A%84%E5%9B%BE%E5%BD%A2%E5%AD%A6%E7%BC%96%E7%A8%8B%E5%88%9D%E6%8E%A2/</guid>
             <title>图形学实验三：基于OpenGL的图形学编程初探</title>
             <link>https://lavender816.github.io/2020/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E5%9F%BA%E4%BA%8EOpenGL%E7%9A%84%E5%9B%BE%E5%BD%A2%E5%AD%A6%E7%BC%96%E7%A8%8B%E5%88%9D%E6%8E%A2/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="C++" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/C/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="图形学" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="C++" scheme="https://lavender816.github.io/categories/coding/cpp/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="图形学" scheme="https://lavender816.github.io/categories/coding/CG/" />
             <category term="C++" scheme="https://lavender816.github.io/tags/C/" />
             <category term="图形学" scheme="https://lavender816.github.io/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" />
             <pubDate>Sun, 15 Nov 2020 23:52:00 +0800</pubDate>
@@ -892,9 +892,9 @@ glTranslatef (0.0, 0.0, -5.0); 将 X 轴平移了 1，glScalef (1.0, 2.0, 1.0); 
             <guid isPermalink="true">https://lavender816.github.io/2020/11/15/20201110javaex3/</guid>
             <title>JAVA实验三：掌握泛型类的原理和使用方法</title>
             <link>https://lavender816.github.io/2020/11/15/20201110javaex3/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="JAVA" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/JAVA/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="JAVA" scheme="https://lavender816.github.io/categories/coding/JAVA/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
             <category term="JAVA" scheme="https://lavender816.github.io/tags/JAVA/" />
             <pubDate>Sun, 15 Nov 2020 21:42:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;java实验三掌握泛型类的原理和使用方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java实验三掌握泛型类的原理和使用方法&#34;&gt;#&lt;/a&gt; JAVA 实验三：掌握泛型类的原理和使用方法&lt;/h1&gt;
@@ -974,9 +974,9 @@ Comparable 接口（排序接口）仅仅只包括一个函数，定义如下：
             <guid isPermalink="true">https://lavender816.github.io/2020/11/14/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89/</guid>
             <title>Hexo搭建个人博客（四）</title>
             <link>https://lavender816.github.io/2020/11/14/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="Hexo" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/Hexo/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="Hexo" scheme="https://lavender816.github.io/categories/coding/Hexo/" />
             <category term="Hexo" scheme="https://lavender816.github.io/tags/Hexo/" />
             <pubDate>Sat, 14 Nov 2020 23:15:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;hexo搭建个人博客四&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo搭建个人博客四&#34;&gt;#&lt;/a&gt; Hexo 搭建个人博客（四）&lt;/h1&gt;
@@ -1059,9 +1059,9 @@ Comparable 接口（排序接口）仅仅只包括一个函数，定义如下：
             <guid isPermalink="true">https://lavender816.github.io/2020/11/14/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89/</guid>
             <title>Hexo搭建个人博客（三）</title>
             <link>https://lavender816.github.io/2020/11/14/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="Hexo" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/Hexo/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="Hexo" scheme="https://lavender816.github.io/categories/coding/Hexo/" />
             <category term="Hexo" scheme="https://lavender816.github.io/tags/Hexo/" />
             <pubDate>Sat, 14 Nov 2020 22:17:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;hexo搭建个人博客三&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo搭建个人博客三&#34;&gt;#&lt;/a&gt; Hexo 搭建个人博客（三）&lt;/h1&gt;
@@ -1212,9 +1212,9 @@ Comparable 接口（排序接口）仅仅只包括一个函数，定义如下：
             <guid isPermalink="true">https://lavender816.github.io/2020/11/13/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/</guid>
             <title>Hexo搭建个人博客（二）（转载）</title>
             <link>https://lavender816.github.io/2020/11/13/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="Hexo" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/Hexo/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="Hexo" scheme="https://lavender816.github.io/categories/coding/Hexo/" />
             <category term="Hexo" scheme="https://lavender816.github.io/tags/Hexo/" />
             <pubDate>Fri, 13 Nov 2020 22:28:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;hexo搭建个人博客二转载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo搭建个人博客二转载&#34;&gt;#&lt;/a&gt; Hexo 搭建个人博客（二）（转载）&lt;/h1&gt;
@@ -1621,9 +1621,9 @@ Comparable 接口（排序接口）仅仅只包括一个函数，定义如下：
             <guid isPermalink="true">https://lavender816.github.io/2020/11/13/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/</guid>
             <title>Hexo 搭建个人博客（一）</title>
             <link>https://lavender816.github.io/2020/11/13/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="Hexo" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/Hexo/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="Hexo" scheme="https://lavender816.github.io/categories/coding/Hexo/" />
             <category term="Hexo" scheme="https://lavender816.github.io/tags/Hexo/" />
             <pubDate>Fri, 13 Nov 2020 22:12:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;hexo-搭建个人博客一&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-搭建个人博客一&#34;&gt;#&lt;/a&gt; Hexo 搭建个人博客（一）&lt;/h1&gt;
@@ -1678,10 +1678,10 @@ Comparable 接口（排序接口）仅仅只包括一个函数，定义如下：
             <guid isPermalink="true">https://lavender816.github.io/2020/11/12/20201112%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%88%86%E5%89%B2/</guid>
             <title>梁友栋－barsky算法实现直线段相对于给定窗口的裁剪(OpenGL)</title>
             <link>https://lavender816.github.io/2020/11/12/20201112%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%88%86%E5%89%B2/</link>
-            <category term="程序员" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/" />
-            <category term="C++" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/C/" />
-            <category term="学习" scheme="https://lavender816.github.io/categories/%E5%AD%A6%E4%B9%A0/" />
-            <category term="图形学" scheme="https://lavender816.github.io/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" />
+            <category term="程序员" scheme="https://lavender816.github.io/categories/coding/" />
+            <category term="C++" scheme="https://lavender816.github.io/categories/coding/cpp/" />
+            <category term="学习" scheme="https://lavender816.github.io/categories/study/" />
+            <category term="图形学" scheme="https://lavender816.github.io/categories/coding/CG/" />
             <category term="C++" scheme="https://lavender816.github.io/tags/C/" />
             <category term="图形学" scheme="https://lavender816.github.io/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" />
             <pubDate>Thu, 12 Nov 2020 21:32:00 +0800</pubDate>
