@@ -8,10 +8,11 @@
         <author>
           <name>Lavender</name>
         </author>
-        <description></description>
+        <description>技术生活分享</description>
         <language>zh-CN</language>
         <pubDate>Thu, 29 Jul 2021 19:09:14 +0800</pubDate>
         <lastBuildDate>Thu, 29 Jul 2021 19:09:14 +0800</lastBuildDate>
+        <category term="技术" />
         <item>
             <guid isPermalink="true">https://www.lavenderdh.cn/2021/07/29/%E5%85%AC%E5%91%8A/</guid>
             <title>公告</title>
