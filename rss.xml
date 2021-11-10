@@ -180,12 +180,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.lavenderdh.cn/2021/04/10/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/</guid>
+            <guid isPermalink="true">https://www.lavenderdh.cn/2021/04/10/coding/CG/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/</guid>
             <title>OpenGL 导入模型</title>
-            <link>https://www.lavenderdh.cn/2021/04/10/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/</link>
+            <link>https://www.lavenderdh.cn/2021/04/10/coding/CG/opengl%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9E%8B/</link>
             <category term="程序员" scheme="https://www.lavenderdh.cn/categories/coding/" />
-            <category term="OpenGL" scheme="https://www.lavenderdh.cn/categories/coding/OpenGL/" />
             <category term="学习" scheme="https://www.lavenderdh.cn/categories/study/" />
+            <category term="OpenGL" scheme="https://www.lavenderdh.cn/categories/coding/OpenGL/" />
             <category term="OpenGL" scheme="https://www.lavenderdh.cn/tags/OpenGL/" />
             <pubDate>Sat, 10 Apr 2021 23:50:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h1&gt;
@@ -592,8 +592,8 @@
             <link>https://www.lavenderdh.cn/2020/12/08/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E6%8A%80%E6%9C%AF%E5%8F%8A%E5%BA%94%E7%94%A8%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9A%E8%BF%90%E5%8A%A8%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</link>
             <category term="程序员" scheme="https://www.lavenderdh.cn/categories/coding/" />
             <category term="C++" scheme="https://www.lavenderdh.cn/categories/coding/cpp/" />
-            <category term="数字视频" scheme="https://www.lavenderdh.cn/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="学习" scheme="https://www.lavenderdh.cn/categories/study/" />
+            <category term="数字视频" scheme="https://www.lavenderdh.cn/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="C++" scheme="https://www.lavenderdh.cn/tags/C/" />
             <pubDate>Tue, 08 Dec 2020 20:11:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数字视频技术及应用实验三运动目标检测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字视频技术及应用实验三运动目标检测&#34;&gt;#&lt;/a&gt; 数字视频技术及应用实验三：运动目标检测&lt;/h1&gt;
@@ -622,8 +622,8 @@
             <link>https://www.lavenderdh.cn/2020/12/08/20201201%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%BA%8C%EF%BC%9A%E8%A7%86%E9%A2%91%E5%A2%9E%E5%BC%BA%E4%B8%8E%E6%92%AD%E6%94%BE%E6%8E%A7%E5%88%B6/</link>
             <category term="程序员" scheme="https://www.lavenderdh.cn/categories/coding/" />
             <category term="C++" scheme="https://www.lavenderdh.cn/categories/coding/cpp/" />
-            <category term="数字视频" scheme="https://www.lavenderdh.cn/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="学习" scheme="https://www.lavenderdh.cn/categories/study/" />
+            <category term="数字视频" scheme="https://www.lavenderdh.cn/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="C++" scheme="https://www.lavenderdh.cn/tags/C/" />
             <pubDate>Tue, 08 Dec 2020 20:09:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数字视频技术及应用实验二视频增强与播放控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字视频技术及应用实验二视频增强与播放控制&#34;&gt;#&lt;/a&gt; 数字视频技术及应用实验二：视频增强与播放控制&lt;/h1&gt;
@@ -811,8 +811,8 @@ String s1=new String(b);&lt;br /&gt;
             <link>https://www.lavenderdh.cn/2020/11/21/20201121%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%85%B3%E9%94%AE%E5%B8%A7%E6%8F%90%E5%8F%96%E4%B8%8E%E5%88%86%E5%89%B2/</link>
             <category term="程序员" scheme="https://www.lavenderdh.cn/categories/coding/" />
             <category term="C++" scheme="https://www.lavenderdh.cn/categories/coding/cpp/" />
-            <category term="数字视频" scheme="https://www.lavenderdh.cn/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="学习" scheme="https://www.lavenderdh.cn/categories/study/" />
+            <category term="数字视频" scheme="https://www.lavenderdh.cn/categories/coding/%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91/" />
             <category term="C++" scheme="https://www.lavenderdh.cn/tags/C/" />
             <pubDate>Sat, 21 Nov 2020 21:52:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数字视频技术及应用实验一关键帧提取与分割&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字视频技术及应用实验一关键帧提取与分割&#34;&gt;#&lt;/a&gt; 数字视频技术及应用实验一：关键帧提取与分割&lt;/h1&gt;
@@ -1121,12 +1121,12 @@ Comparable 接口（排序接口）仅仅只包括一个函数，定义如下：
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.lavenderdh.cn/2020/11/14/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89/</guid>
+            <guid isPermalink="true">https://www.lavenderdh.cn/2020/11/14/coding/hexo/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89/</guid>
             <title>Hexo搭建个人博客（四）</title>
-            <link>https://www.lavenderdh.cn/2020/11/14/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89/</link>
+            <link>https://www.lavenderdh.cn/2020/11/14/coding/hexo/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%9B%9B%EF%BC%89/</link>
             <category term="程序员" scheme="https://www.lavenderdh.cn/categories/coding/" />
-            <category term="Hexo" scheme="https://www.lavenderdh.cn/categories/coding/Hexo/" />
             <category term="学习" scheme="https://www.lavenderdh.cn/categories/study/" />
+            <category term="Hexo" scheme="https://www.lavenderdh.cn/categories/coding/hexo/" />
             <category term="Hexo" scheme="https://www.lavenderdh.cn/tags/Hexo/" />
             <pubDate>Sat, 14 Nov 2020 23:15:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;hexo搭建个人博客四&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo搭建个人博客四&#34;&gt;#&lt;/a&gt; Hexo 搭建个人博客（四）&lt;/h1&gt;
