@@ -137,8 +137,11 @@
 &lt;p&gt;&lt;img data-src=&#34;https://gitee.com/lavender816/image-bed/raw/master/img/image-20211229144711036.png&#34; alt=&#34;image-20211229144711036&#34; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;填入 &lt;code&gt;Erukon&lt;/code&gt;  的 &lt;code&gt;GitHub api&lt;/code&gt;  项目：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0V1cmtvbi9iYWlkdS10b25namktYXBp&#34;&gt;https://github.com/Eurkon/baidu-tongji-api&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;填入 &lt;code&gt;Erukon&lt;/code&gt;  的 &lt;code&gt;GitHub api&lt;/code&gt;  项目：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0V1cmtvbi9iYWlkdS10b25namktYXBp&#34;&gt;https://github.com/Eurkon/baidu-tongji-api&lt;/span&gt;&lt;br /&gt;
+ 项目网址：&lt;/p&gt;
 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;Eurkon&amp;#x2F;baidu-tongji-api&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;如果提示是否是你的仓库，选&lt;strong&gt;否&lt;/strong&gt;， &lt;code&gt;Vercel&lt;/code&gt;  会自动帮你  &lt;code&gt;fork&lt;/code&gt;  这个仓库到你的  &lt;code&gt;Github&lt;/code&gt;  账号里。&lt;/p&gt;
 &lt;/li&gt;
