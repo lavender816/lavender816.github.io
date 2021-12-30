@@ -33,6 +33,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;本教程将会泄漏属于百度统计的 &lt;code&gt;站点 ID&lt;/code&gt;  和百度统计  &lt;code&gt;AccessToken&lt;/code&gt; ，请先前往 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b25namkuYmFpZHUuY29tL2FwaS9tYW51YWwv&#34;&gt;百度统计用户手册&lt;/span&gt;了解，介意者请谨慎部署。&lt;/p&gt;
 &lt;p&gt;可能有时会出现跨域请求的问题&lt;/p&gt;
+&lt;p&gt;开通前条件：链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b25namkuYmFpZHUuY29tL3dlYi9oZWxwL2FydGljbGU/aWQ9MTIzJUVGJUJDJThDJUU5JTlDJTgwJUU4JUE2JTgxJUU4JTg3JUFBJUU2JTlDJTg5JUU3JUJEJTkxJUU3JUFCJTk5JUU2JTk4JUE4JUU2JTk3JUE1UFYlRTYlOTUlQjAlRTUlQTQlQTclRTQlQkElOEUxMDA=&#34;&gt;https://tongji.baidu.com/web/help/article?id=123，需要自有网站昨日 PV 数大于 100&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实现&#34;&gt;#&lt;/a&gt; 实现&lt;/h2&gt;
@@ -67,10 +68,10 @@
 &lt;h3 id=&#34;获取网站统计数据&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#获取网站统计数据&#34;&gt;#&lt;/a&gt; 获取网站统计数据&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;进入百度统计 - 管理 - 数据导出服务&lt;/p&gt;
+&lt;p&gt;进入百度统计 - 管理 - 数据导出服务；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;开通数据导出服务，获得 &lt;code&gt;API Key&lt;/code&gt;  与 &lt;code&gt;Secret Key&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;开通数据导出服务，获得 &lt;code&gt;API Key&lt;/code&gt;  与 &lt;code&gt;Secret Key&lt;/code&gt;  或者登录&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RldmVsb3Blci5iYWlkdS5jb20vY29uc29sZSNhcHAvcHJvamVjdA==&#34;&gt;开发者服务管理&lt;/span&gt;；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;通过如下 &lt;code&gt;URL&lt;/code&gt;  进入百度账号登录页，此处的登录账号就是您登录百度统计查看报告数据的账号，登录完成后将跳转至获取 &lt;code&gt;code&lt;/code&gt;  的页面：&lt;/p&gt;
