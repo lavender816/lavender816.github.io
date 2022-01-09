@@ -139,8 +139,8 @@
             ]
         },
         {
-            "id": "https://www.lavenderdh.cn/announcement/",
-            "url": "https://www.lavenderdh.cn/announcement/",
+            "id": "https://www.lavenderdh.cn/posts/1139700195/",
+            "url": "https://www.lavenderdh.cn/posts/1139700195/",
             "title": "公告",
             "date_published": "2021-07-29T11:09:14.000Z",
             "content_html": "<h1 id=\"公告\"><a class=\"anchor\" href=\"#公告\">#</a> 公告</h1>\n<h2 id=\"1-发生什么了\"><a class=\"anchor\" href=\"#1-发生什么了\">#</a> 1. 发生什么了？</h2>\n<div class=\"note warning\">\n<p>本博客全面从 wordpress 转到 hexo 静态页面，网址不变，博客内容不变，友链不变，但是评论从 wordpress 转太过麻烦，目前暂时不搞了……</p>\n</div>\n<h2 id=\"2-为什么\"><a class=\"anchor\" href=\"#2-为什么\">#</a> 2. 为什么？</h2>\n<ol>\n<li>博客将近一年了，原来的博客是搭建在云服务器上，服务器也快到期了，不续费了，<span class=\"spoiler bulr\" title=\"你知道得太多了\">没钱了</span></li>\n<li>其实博客这些内容托管在 github pages 完全够用，相比较服务器成本太高了。</li>\n<li>wordpress 太臃肿了，hexo 相比较轻一些，而且文件都在本地，主题也很多。</li>\n</ol>\n<h2 id=\"3接下来\"><a class=\"anchor\" href=\"#3接下来\">#</a> 3. 接下来</h2>\n<p>接下来就一直用这个博客啦</p>\n<h2 id=\"4悄悄增加个github提交日历\"><a class=\"anchor\" href=\"#4悄悄增加个github提交日历\">#</a> 4. 悄悄增加个 github 提交日历</h2>\n<p><img data-src=\"https://ghchart.rshah.org/ab66ff/lavender816\" alt=\"\" /></p>\n<h2 id=\"5新增个有趣的计数\"><a class=\"anchor\" href=\"#5新增个有趣的计数\">#</a> 5. 新增个有趣的计数</h2>\n<blockquote>\n<p>（从 2021 年 11 月 30 日 15:50 开始计数）</p>\n</blockquote>\n<p><img data-src=\"https://count.getloli.com/get/@:lavenderGongGao\" alt=\":lavenderGongGao\" /></p>\n",
