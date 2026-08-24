@@ -23,9 +23,9 @@
         <link rel="alternate" href="https://blog.lavender816.top/posts/584182234/"/>
         <summary type="text">本来想浏览主题作者的博客，奈何作者大大很久没更新了，网站：琉璃的医学 &amp;amp; 编程笔记打不开了，控制台找到报错： ，直接的意思是：在 app.js 第 1 行，变量 t 被声明了两次。浏览器直接拒绝执行这个文件；这样的报错许多 shoka 主题的很久没有维护的网站都出现了，但是我想临时看下博主网页内容，查到如下方法，作为记录，说不定以后也能用得上…… 适用场景：线上网站 JS 有语法错误 / 想临时改线上代码 / 改完刷新不丢失 / 覆盖后还能正常打断点 环境：Microsoft Edge（Chromium 内核，版本 ≥ 90 均可） 原理：DevTools 把线上文件存到本地文件夹，刷新时浏览器用本地副本代替网络响应 #一、整体流程一览 开 DevTools → Sources（源代码）→ Overrides（覆盖） 选一个空本地文件夹 → 点 Allow 授权 在 Page 树里找到报错的 JS → 右键 Save for overrides 在 Sources 编辑器里改代码 Ctrl + S 保存 → 刷新页面 → 浏览器用本地版 覆盖状态下照样可以点行号打断点 #二、详细步骤 #Step 1 打开 DevTools 快捷键：F12 或 Ctrl+Shift+I 切到顶部 Sources（源代码） 标签 #Step 2 进入 Overrides 并授权文件夹 左侧文件树底部切到 Overrides（覆盖） 标签（和 Page 并列，找不到点 更多标签） 点击 + Select folder for overrides（选择替代文件夹） 选一个空文件夹，例如： 系统弹窗点 允许（Allow） —— 这一步必须点，不点后面存不进磁盘 授权后： 文件夹出现在 Overrides 列表 Enable Local Overrides（启用本地替代） 复选框自动勾上 缓存…</summary>
         <category term="前端" scheme="https://blog.lavender816.top/categories/%E5%89%8D%E7%AB%AF/" />
-        <category term="html" scheme="https://blog.lavender816.top/tags/html/" />
-        <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
         <category term="JavaScript" scheme="https://blog.lavender816.top/tags/javascript/" />
+        <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
+        <category term="html" scheme="https://blog.lavender816.top/tags/html/" />
         <updated>2026-08-24T14:30:00.000Z</updated>
     </entry>
     <entry>
@@ -157,8 +157,8 @@
         <link rel="alternate" href="https://blog.lavender816.top/posts/2028137251/"/>
         <summary type="text">这里记录下冰墩墩和雪容融的前端代码，源码从网络上获得，仅作记录 #冰墩墩 #HTML 部分 #CSS 部分 #效果图 #雪容融 #HTML 部分 #CSS 部分 #效果图</summary>
         <category term="前端" scheme="https://blog.lavender816.top/categories/%E5%89%8D%E7%AB%AF/" />
-        <category term="html" scheme="https://blog.lavender816.top/tags/html/" />
         <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
+        <category term="html" scheme="https://blog.lavender816.top/tags/html/" />
         <updated>2022-02-25T14:00:00.000Z</updated>
     </entry>
     <entry>
