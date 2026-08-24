@@ -25,7 +25,7 @@
         <category term="前端" scheme="https://blog.lavender816.top/categories/%E5%89%8D%E7%AB%AF/" />
         <category term="html" scheme="https://blog.lavender816.top/tags/html/" />
         <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
-        <category term="JavaScript" scheme="https://blog.lavender816.top/tags/JavaScript/" />
+        <category term="JavaScript" scheme="https://blog.lavender816.top/tags/javascript/" />
         <updated>2026-08-24T14:30:00.000Z</updated>
     </entry>
     <entry>
@@ -52,7 +52,7 @@
         <link rel="alternate" href="https://blog.lavender816.top/posts/3178159665/"/>
         <summary type="text">将 Shoka 默认的线性归档、分类和标签列表改造成统一的卡片页面，加入数据概览、层级分类、最近文章、日期卡片、面包屑和移动端适配。 #前言 Shoka 默认归档页面使用时间轴展示文章，结构清晰，但当文章、分类和标签逐渐增多后，页面会显得较长，也不容易快速浏览。本次改造把归档、分类和标签统一为一套视觉系统，同时保留 Hexo 原有分页、分类层级和 PJAX 行为。 改造后的页面分为四类： ：按年份分组的文章卡片； ：当前分类下的文章卡片； ：当前标签下的文章卡片； 和 ：分类索引卡片与标签索引卡片。 #开始前准备 这篇教程会修改主题模板、主题脚本和 Stylus 样式。第一次接触 Hexo 也不用担心，按下面的顺序操作即可。 找到博客根目录。能够看到 、 、 和 的文件夹，就是博客根目录。 复制一份 作为备份，或者先提交一次 Git。这样即使粘贴错误也可以快速恢复。 在博客根目录打开终端，执行 ，确保现有依赖已经安装。 后文出现的所有路径都从博客根目录开始计算，不要修改 目录。 是 Hexo 每次生成时自动创建的成品目录，直接修改会被覆盖。 每完成一个大步骤，都可以执行一次 。如果某一步写错，终端会更容易指出具体文件。 本文本身也由 Hexo 生成。为了防止文章中的 Nunjucks 示例被当成真正的主题指令执行，教程源文件对花括号做了转义；网页中显示和复制出来的代码仍然是正常的 Nunjucks 语法。真正修改 文件时，不要手动把花括号改成 HTML 实体。 #文件结构 #文件变更清单 下面先把文件级变化说清楚，再进入具体操作。这样即使是第一次修改主题，也能知道每一步应该新建文件、修改原文件，还是只做检查。 操作 文件 具体变化 新增 新建可复用的文章卡片宏，统一日期、标题、分类、字数、阅读时间和跳转箭头。 修改 删除原来的线性归档列表结构，改成概览卡、面包屑、年份分组和…</summary>
         <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
-        <category term="Hexo" scheme="https://blog.lavender816.top/tags/Hexo/" />
+        <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
         <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
         <updated>2026-08-19T02:30:00.000Z</updated>
     </entry>
@@ -62,7 +62,7 @@
         <link rel="alternate" href="https://blog.lavender816.top/posts/942686986/"/>
         <summary type="text">重新设计 Shoka 主题统计页面，加入多年份文章日历、发布趋势、创作时钟、文章体量散点图、标签排行、分类分布以及分类与标签旭日图。 #前言 早期的统计页面只包含几个基础 ECharts 图表，功能可以使用，但在移动端、PJAX 页面切换、日间与夜间模式以及大量数据展示方面不够完善。本次改造在保留 Shoka 配色的基础上，重新设计图表卡片和加载方式，并让图表只在接近可视区域时初始化。 最终页面包含以下内容： 可从左侧切换年份的文章发布日历； 支持最近 6、12、24 个月、全部月份和自定义范围的发布趋势； 按星期和 24 小时展示发布习惯的创作时钟； 可点击进入文章、并随可视时间范围调整纵轴的文章体量散点图； TOP 10 标签、文章分类分布； 展示 “分类 → 标签” 关系的旭日图； PJAX 切换、窗口缩放、移动端和日间 / 夜间模式实时适配。 #开始前准备 如果是第一次修改 Hexo 主题，请先完成下面几项： 找到博客根目录。能看到 、 、 和 文件夹的目录就是根目录； 备份 和 ，或者先提交一次 Git； 在博客根目录打开终端，执行 ，确认依赖已经安装； 本文出现的路径都从博客根目录开始计算，不要把主题配置文件和站点根配置文件混淆； 每完成一个大步骤都可以执行一次 ，这样更容易找到出错位置。 本教程需要 、 和 。如果项目还没有安装，请执行： 请不要直接在 文件夹中修改代码。 是 Hexo 自动生成的目录，下一次执行 后其中的手动修改会全部消失。 #文件结构 本次主要涉及以下文件： #文件变更清单 下面按 “新增、修改、自动生成、删除” 说明每个文件发生了什么。这里描述的是完成本教程后的最终状态，实际操作时应按后文步骤依次进行。 操作 文件 具体变化 修改或重建 重做统计页结构和样式；加入年份选择、时间范围选择、7 个图表容器及主题同步脚本；关闭评论和版权区。若原…</summary>
         <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
-        <category term="Hexo" scheme="https://blog.lavender816.top/tags/Hexo/" />
+        <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
         <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
         <updated>2026-08-19T02:00:00.000Z</updated>
     </entry>
@@ -72,7 +72,7 @@
         <link rel="alternate" href="https://blog.lavender816.top/posts/3644149879/"/>
         <summary type="text">💌依赖插件 - 📌基本配置 - 🌈界面显示 - 🦄特殊功能 以下介绍可以使用的 markdown 或者标签代码。 功能大部分基于 渲染器，尤其是代码块的显示，与默认渲染器不兼容。 链接块 本功能参考 NexT，基于 Hexo Tag 功能，用来建立友链或其他网址链接功能。 文章中的使用格式： 使用 标签块，包围 语法书写的内容，字段包括 站点名称 必填 管理员名字 可选，默认为 的值 站点链接 必填 站点描述 可选，默认为 的值 站点图片 可选，默认为 方块颜色 可选，默认为 举个栗子： 優萌初華 琉璃的医学 &amp;amp; 编程笔记 優萌初華 https://shoka.lostyu.me 優萌初華 琉璃的医学 &amp;amp; 编程笔记 以上标签块里的内容，还可以保存到一个 文件中，然后使用 标签。 其中， 位于 目录下。 举个栗子： 代码块 使用 进行代码高亮，支持显示行号、行高亮 、命令行提示符 、代码块标题。 基本格式： 选项 描述 默认值 language 支持的语言戳此 如果不需要代码高亮，但希望显示代码块样式，则设为 留空或设为 ，将不显示代码高亮和代码块样式 null title 代码块的标题文字 null url 代码块标题右侧显示的链接 null link text 上述链接显示的标题 link mark 行高亮显示，格式为 。 例如 ，将高亮显示第 1、4、5、6、7、10 行 null command 命令行提示符，格式为 例如 null 练习题与答案 这个功能是用来显示练习题的。 需要在 Front Matter 中添加 ，以正确显示题型标签。 点击选项可以显示答案，以及答案解析。 下列叙述正确的是 。 虚函数只能定义成无参函数 虚函数不能有返回值 能定义虚构造函数 A、B、C 都不对 有基类 ，派生类 ，声明如下变量： 下列哪些项是 “派生类对象…</summary>
         <category term="shoka主题" scheme="https://blog.lavender816.top/categories/shoka%E4%B8%BB%E9%A2%98/" />
-        <category term="Hexo" scheme="https://blog.lavender816.top/tags/Hexo/" />
+        <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
         <category term="教程" scheme="https://blog.lavender816.top/tags/%E6%95%99%E7%A8%8B/" />
         <updated>2026-08-13T13:45:48.000Z</updated>
     </entry>
@@ -82,7 +82,7 @@
         <link rel="alternate" href="https://blog.lavender816.top/posts/3076693460/"/>
         <summary type="text">💌依赖插件 - 📌基本配置 - 🌈界面显示 - 🦄特殊功能 首页置顶文章 在文章的 Front Matter 设置 ，则该文章将显示在首页最上方的 列。 多篇文章按照发布时间倒序排列，不分页。 首页精选分类 想要在首页显示分类翻转块，需要按照以下示例的方式，给需要显示的分类加上封面图。 首先，修改站点配置： 找到 ，配置每个分类对应的英文映射，比如： 注意：hexo 会自动处理路径中的特殊字符，~`!@#$%^&amp;amp;*()-_+={}|\;:&amp;quot;&#39;&amp;lt;&amp;gt;,.? 以及空格，这些全部会被替换成 所以避免在设置中使用上述字符，否则可导致无法抓取到目录下的 在 文件夹相应的目录里，存放封面图 例子：如 第 1 周 计算 这篇文章。 所处的分类是 现在需要在首页显示 这个分类，翻转卡片后，显示这个分类下的文章们。 而该分类经过英文映射，它的路径将是 。 那么，请在 的目录下放置 文件。 只要 对应的目录下存在 文件，这个分类就会在首页显示。 在进行 时，本分类的封面图会自动被复制到 public 目录里相应的位置。 事实上，为了方便文章管理，这个分类下所有文章的 md 文件，我都会放在 这个目录下。 且站点配置文件里，永久链接设置如下 后，文章的 html 文件们将全部生成到 目录。 具体可以查看本博客的 github 仓库。 文章详情界面中的 ，显示的是与当前文章同一分类的其他文章，并按照文章名正序排序。 o (*￣▽￣*) ゞ 其实，不设置 也可以，只要在分类路径对应的文件夹下存在 文件就行。 现在，这项功能与 的配置也无关， 生成后，图片会自动被转移到 的相关子目录下。 文章封面图 如果文章的 Front Matter 设置了 ，则封面会显示这张图片。 这里 的值可以是位于 目录里的图片文件，此处是 文件，也可以是一个某网址。 如果文章是一个 ，即…</summary>
         <category term="shoka主题" scheme="https://blog.lavender816.top/categories/shoka%E4%B8%BB%E9%A2%98/" />
-        <category term="Hexo" scheme="https://blog.lavender816.top/tags/Hexo/" />
+        <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
         <category term="教程" scheme="https://blog.lavender816.top/tags/%E6%95%99%E7%A8%8B/" />
         <updated>2026-08-13T13:12:48.000Z</updated>
     </entry>
@@ -92,7 +92,7 @@
         <link rel="alternate" href="https://blog.lavender816.top/posts/140130072/"/>
         <summary type="text">💌依赖插件 - 📌基本配置 - 🌈界面显示 - 🦄特殊功能 站点别称 这里设置的名称代替 Logo，显示在页面顶部，以及页尾©️处 静态文件目录 默认值是 ，指使用本地静态文件 可以修改成 这种形式，以使用 jsDelivr 进行加速。 PS：jsDelivr 并不是实时更新，重新生成文件后需要耐心等待 静态文件所处目录的实际目录名，这些一般不改。 夜间模式 默认情况下，是否开启夜间模式取决于（优先级从高到低）： 访客点击页面头部切换按钮的自行选择 访客切换了浏览设备的主题色调 您的 配置项 自动定位 默认情况下，再次打开页面时，会自动滚动到上次浏览的位置。 这个选项设为 时将停用此功能。 加载动画 tab 切换后只是显示 loading 动画，实际并未重新加载页面 页面特效 单击页面的烟花效果配置如下 加载谷歌字体 此功能基本参考 NexT。 加粗标题的字体总是使用 ，为了正确友好的显示日文中的汉字，会先后加载 和 的字体设置。 图标 主题没有直接使用 Font Awesome，是因为用不到那么多 icon 感觉非常浪费，因此在 Iconfont 上重新建立了一个项目。 设为 ，所有字体样式前缀为 ，具体参见 。 如果需要添加或修改，请留言告诉我您的 Iconfont 用户名，我将把您添加到目前的项目中。 添加权限为 ，此后您可以任意全选，批量保存到购物车中，添加至您自己的项目里，并将主题配置文件中的 值改为您的项目。 注意，您的项目应设置 为 。 在 目录新建文件 ，把新增或修改的图标样式复制到这个文件中。 自定义 文件将覆盖主题默认样式，为了避免出错，请保证原有样式名均存在，在原有样式基础上进行增删改。 菜单与社交按钮 如上，使用 作为分隔符，依次为 。 注意，只需要写图标名称，如 ，则会自动转换为 。 十六进制颜色码需要 包绕。 支持一级子目录，子目录设置中…</summary>
         <category term="shoka主题" scheme="https://blog.lavender816.top/categories/shoka%E4%B8%BB%E9%A2%98/" />
-        <category term="Hexo" scheme="https://blog.lavender816.top/tags/Hexo/" />
+        <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
         <category term="教程" scheme="https://blog.lavender816.top/tags/%E6%95%99%E7%A8%8B/" />
         <updated>2026-08-13T12:56:48.000Z</updated>
     </entry>
@@ -102,7 +102,7 @@
         <link rel="alternate" href="https://blog.lavender816.top/posts/3540591317/"/>
         <summary type="text">💌依赖插件 - 📌基本配置 - 🌈界面显示 - 🦄特殊功能 请务必将 hexo-renderer-multi-markdown-it 升级到最新版，目前为 0.1.5 Theme Shoka 依赖以下 Hexo 插件 插件名称 npm 地址 功能 依赖程度 hexo-renderer-multi-markdown-it 链接 md 文件渲染器，压缩 css/js/html 必需 hexo-autoprefixer 链接 给生成的 css 文件们添加浏览器前缀 必需 hexo-algoliasearch 链接 站内搜索功能 搜索按钮失灵 hexo-symbols-count-time 链接 文章或站点字数及阅读时间统计 统计没有 hexo-feed 链接 生成 Feed 文件 Feed 文件没有 没有正确安装以上插件的话，本主题会报错 or 无法正确显示 or 部分功能失效。 请注意升级到最新版 安装完以上插件后，修改站点配置文件，加入相关配置。 multi-markdown-it 安装与配置 #安装 安装前，记得务必卸载掉默认的 ，以及别的 markdown 文件渲染器。 安装 如果安装缓慢，或者失败 如报错 因为有一步需要下载 puppeteer 里的 Chromium 内核，基于天朝内部网络现状，这一步能不能成功要靠科学和运气，所以为了避免安装失败，需要加上 跳过 Chromium 内核的下载。 puppeteer 主要是用来渲染 mermaid 流程图，只要文章中不使用 mermaid 就没有任何问题，如果要使用 mermaid 建议还是想办法完全安装。 #配置 加入 配置，用来渲染 md 文件 加入 配置，压缩 css/js/html 停用默认代码高亮功能，否则代码块的 mac 样式不能正常显示。 找到 和 ，把 改成 。 autoprefixer 配置建议…</summary>
         <category term="shoka主题" scheme="https://blog.lavender816.top/categories/shoka%E4%B8%BB%E9%A2%98/" />
-        <category term="Hexo" scheme="https://blog.lavender816.top/tags/Hexo/" />
+        <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
         <category term="教程" scheme="https://blog.lavender816.top/tags/%E6%95%99%E7%A8%8B/" />
         <updated>2026-08-13T12:46:48.000Z</updated>
     </entry>
