@@ -8,7 +8,7 @@
     <author>
       <name>Lavender</name>
     </author>
-    <updated>2026-08-24T14:30:00.000Z</updated>
+    <updated>2026-09-03T13:45:00.000Z</updated>
     <category term="Lavender博客" />
     <category term="Hexo" />
     <category term="Shoka主题" />
@@ -17,6 +17,16 @@
     <category term="计算机图形学" />
     <category term="技术教程" />
     <category term="软件分享" />
+    <entry>
+        <id>https://blog.lavender816.top/posts/1876049321/</id>
+        <title>Shoka主题：使用Three.js实现交互式3D留声机</title>
+        <link rel="alternate" href="https://blog.lavender816.top/posts/1876049321/"/>
+        <summary type="text">把 Shoka 的普通音乐播放器改造成一个可以旋转、换唱片、看歌词和跟随音乐律动的 Three.js 三维留声机，并保证 Three.js 只在留声机页面加载。 搞这个活也是为了消耗下 token #前言 Shoka 原本已经支持 音乐标签，但它主要负责播放音乐，并不会把音乐状态呈现在三维场景中。本次改造保留主题原来的音频解析和播放能力，在它外面增加一层 Three.js 交互场景。 最终效果包含： 三渲二风格的留声机底座、唱盘、唱针、喇叭、摇把、花草、路牌和喷泉； 播放时唱片和摇把转动，暂停后停止； 唱针随播放状态平移，并根据播放进度逐渐改变位置； 喇叭口只在播放时出现声浪； 唱片周围显示跟随音乐变化的彩色频谱； 点击唱片架后展开多个歌单，支持左右浏览和换片动画； 点击正面屏幕打开播放面板，可操作播放、暂停、停止、上一首、下一首、进度、音量和具体歌曲； 支持当前歌词、下一句歌词、封面和当前歌单曲目列表； 支持拖动视角、滚轮缩放和全屏浏览； 离开页面时释放场景、纹理、监听器和动画； Three.js、留声机脚本及样式只在指定页面加载。 这篇教程以 “能照着做出来” 为目标。即使你以前没有写过 Three.js，也可以先按顺序搭好结构，再逐步替换模型细节。 #实现思路 先看清楚各部分之间的关系，后面修改时会容易很多： 最重要的一点是：音乐仍由 Shoka 原播放器负责，Three.js 只负责表现和交互。 这样不需要重新实现网易云歌单解析，也不会出现两个播放器同时播放的问题。 #开始前准备 #1. 找到博客根目录 能看到下面这些文件和文件夹的位置就是博客根目录： 本文所有路径都从博客根目录开始计算。 #2. 先备份 建议先提交一次 Git，或者至少备份以下目录： #3. 安装 Three.js 在博客根目录打开终端，执行： 自定义标签使用 YAML 读取歌单。Hexo 项目通…</summary>
+        <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
+        <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
+        <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
+        <updated>2026-09-03T13:45:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://blog.lavender816.top/posts/584182234/</id>
         <title>在线网页加载本地资源</title>
@@ -196,14 +206,5 @@
         <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
         <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
         <updated>2021-12-25T06:30:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.lavender816.top/posts/3928966287/</id>
-        <title>Shoka主题：实现页面背景大图全屏效果</title>
-        <link rel="alternate" href="https://blog.lavender816.top/posts/3928966287/"/>
-        <summary type="text">实现页面背景大图全屏效果 #前言 主题默认首页等其他页面大图是半屏, 个人喜欢图片占据全屏的效果, 因此修改源码 #实现 #修改 Stylus 找到 目录, 以下修改都是在该目录下修改; 找到 , 在 中修改 值: 修改为 找到 , 在 中修改 值: 修改为 找到 , 在 中修改 值: 修改为 找到 , 在 中修改 值: 修改为 找到 , 在 中修改: 修改为 #修改 nunjucks (layout) 找到 目录; 修改 , 修改 的位置, 大概 60 行左右: 将 标签移动到 为 的 下方, 即: #图片网格效果 2022.06.23 更新 修改 ; 最上方的 修改如下： 其中： 是新增的图片网格效果，目前是点状，可以自行下载其他的网格填充。 完成！</summary>
-        <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
-        <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
-        <updated>2021-12-25T06:00:00.000Z</updated>
     </entry>
 </feed>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="默认音乐封面">
+  <defs>
+    <radialGradient id="bg" cx="32%" cy="24%" r="88%">
+      <stop offset="0" stop-color="#d9b7ff"/>
+      <stop offset="0.46" stop-color="#9568df"/>
+      <stop offset="1" stop-color="#35244f"/>
+    </radialGradient>
+    <linearGradient id="note" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff4ff"/>
+      <stop offset="0.54" stop-color="#8fe6ef"/>
+      <stop offset="1" stop-color="#f4a6d5"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="240" height="240" rx="120" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="88" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="120" cy="120" r="64" fill="none" stroke="#8fe6ef" stroke-opacity=".12"/>
+  <g fill="#fff" opacity=".42">
+    <circle cx="60" cy="70" r="3"/><circle cx="180" cy="58" r="2"/><circle cx="190" cy="151" r="3"/>
+    <circle cx="49" cy="161" r="2"/><circle cx="151" cy="194" r="2"/>
+  </g>
+  <path d="M137 60v88.5c0 17.2-13.8 31.5-31.2 31.5-14.9 0-26.8-9.2-26.8-21.1 0-12.5 13-22.6 29-22.6 5.3 0 10.2 1.1 14 3V82l61-13v67.5c0 17.2-13.8 31.5-31.2 31.5-14.9 0-26.8-9.2-26.8-21.1 0-12.5 13-22.6 29-22.6 5.3 0 10.2 1.1 14 3V49z" fill="url(#note)" filter="url(#glow)"/>
+</svg>
