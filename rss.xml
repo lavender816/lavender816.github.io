@@ -10,8 +10,8 @@
         </author>
         <description>Lavender 的个人技术博客，分享 Hexo 与 Shoka 主题改造、前端开发、Java、计算机图形学、软件工具及学习笔记。</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 03 Sep 2026 21:45:00 +0800</pubDate>
-        <lastBuildDate>Thu, 03 Sep 2026 21:45:00 +0800</lastBuildDate>
+        <pubDate>Sat, 05 Sep 2026 12:00:00 +0800</pubDate>
+        <lastBuildDate>Sat, 05 Sep 2026 12:00:00 +0800</lastBuildDate>
         <category term="Lavender博客" />
         <category term="Hexo" />
         <category term="Shoka主题" />
@@ -21,12 +21,24 @@
         <category term="技术教程" />
         <category term="软件分享" />
         <item>
+            <guid isPermalink="true">https://blog.lavender816.top/posts/2026090501/</guid>
+            <title>Shoka主题：Markdown扩展语法展示与使用指南</title>
+            <link>https://blog.lavender816.top/posts/2026090501/</link>
+            <category term="shoka主题" scheme="https://blog.lavender816.top/categories/shoka%E4%B8%BB%E9%A2%98/" />
+            <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
+            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
+            <category term="Markdown" scheme="https://blog.lavender816.top/tags/markdown/" />
+            <category term="教程" scheme="https://blog.lavender816.top/tags/%E6%95%99%E7%A8%8B/" />
+            <pubDate>Sat, 05 Sep 2026 12:00:00 +0800</pubDate>
+            <description><![CDATA[ 在原有 Shoka 特殊语法的基础上，整理适合写教程、项目介绍和图文记录的 Markdown 扩展，并补充本站已有的交互式 3D 留声机标签，以及本次新增的行内批注、参数卡片和阅读增强。这篇文章既是使用手册，也是一张可以直接操作的展示页：每一节先给出源码，再展示实际效果。 原有语法仍然可以照常使用，包括提示块、折叠块、选项卡、公式、Mermaid、行号与高亮代码块等。原有手册见 Step.4 主题特殊功能（转载）。本文的新增语法和查看器不会替换原有写法或音乐语法。 #一、扩展速览 扩展 最简写法 适合的内容 文件树 文件夹层级、项目结构、文件增删说明 代码树 一个示例包含多个代码文件时，切换查看 步骤流 安装、配置、排错等需要按顺序操作的教程 图片画廊网格 截图、作品集、照片；点击查看完整原图 GitHub 仓库卡片 分享开源项目 交互式 3D 留声机 成对标签 歌单唱片架、音乐播放、歌词与模型互动 行内批注 与 不打断阅读的术语解释和补充说明 参数卡片 配置项、接口字段、类型、必填与默认值 #使用前需要设置什么？ 除留声机外，表中的语法直接写在文章正文中即可，不需要为每篇文章单独打开开关，也不需要安装 Astro 或 Svelte。留声机还需要在该文章顶部的 Front Matter 中加入 ，具体见第七节。批注、参数卡片、流程图查看器与阅读设置见第九节。 多行容器以 结束；GitHub 卡片只有一行，不写结束标记。 参数写在开头的花括号中，含空格的值使用英文引号。 示例中的四个反引号仅用于在教程里展示三个反引号的写法；真正使用时，复制示例框里面的内容即可。 修改语法插件后，如果本地预览一直开着，需要重启一次 ；正常写文章不需要反复重启。 #二、文件树：清楚展示目录与文件改动 #2.1 用缩进列表写文件树 表示一项，前面多缩进两个空格，表示它属于上一层目录。 实际效果： … ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://blog.lavender816.top/posts/1876049321/</guid>
             <title>Shoka主题：使用Three.js实现交互式3D留声机</title>
             <link>https://blog.lavender816.top/posts/1876049321/</link>
             <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
-            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
+            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <pubDate>Thu, 03 Sep 2026 21:45:00 +0800</pubDate>
             <description><![CDATA[ 把 Shoka 的普通音乐播放器改造成一个可以旋转、换唱片、看歌词和跟随音乐律动的 Three.js 三维留声机，并保证 Three.js 只在留声机页面加载。 搞这个活也是为了消耗下 token #前言 Shoka 原本已经支持 音乐标签，但它主要负责播放音乐，并不会把音乐状态呈现在三维场景中。本次改造保留主题原来的音频解析和播放能力，在它外面增加一层 Three.js 交互场景。 最终效果包含： 三渲二风格的留声机底座、唱盘、唱针、喇叭、摇把、花草、路牌和喷泉； 播放时唱片和摇把转动，暂停后停止； 唱针随播放状态平移，并根据播放进度逐渐改变位置； 喇叭口只在播放时出现声浪； 唱片周围显示跟随音乐变化的彩色频谱； 点击唱片架后展开多个歌单，支持左右浏览和换片动画； 点击正面屏幕打开播放面板，可操作播放、暂停、停止、上一首、下一首、进度、音量和具体歌曲； 播放面板支持单曲循环、列表播放和随机播放，并自动定位当前歌曲； 支持当前歌词、下一句歌词、封面和当前歌单曲目列表； 支持拖动视角、滚轮缩放和全屏浏览； 离开页面时释放场景、纹理、监听器和动画； Three.js、留声机脚本及样式只在指定页面加载。 这篇教程以 “能照着做出来” 为目标。即使你以前没有写过 Three.js，也可以先按顺序搭好结构，再逐步替换模型细节。 #实现思路 先看清楚各部分之间的关系，后面修改时会容易很多： 最重要的一点是：音乐仍由 Shoka 原播放器负责，Three.js 只负责表现和交互。 这样不需要重新实现网易云歌单解析，也不会出现两个播放器同时播放的问题。 #开始前准备 #1. 找到博客根目录 能看到下面这些文件和文件夹的位置就是博客根目录： 本文所有路径都从博客根目录开始计算。 #2. 先备份 建议先提交一次 Git，或者至少备份以下目录： #3. 安装 Three.js 在博客根目录打开终… ]]></description>
         </item>
@@ -64,8 +76,8 @@
             <title>Shoka主题：美化归档、分类与标签页面</title>
             <link>https://blog.lavender816.top/posts/3178159665/</link>
             <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
-            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
+            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <pubDate>Wed, 19 Aug 2026 10:30:00 +0800</pubDate>
             <description><![CDATA[ 将 Shoka 默认的线性归档、分类和标签列表改造成统一的卡片页面，加入数据概览、层级分类、最近文章、日期卡片、面包屑和移动端适配。 #前言 Shoka 默认归档页面使用时间轴展示文章，结构清晰，但当文章、分类和标签逐渐增多后，页面会显得较长，也不容易快速浏览。本次改造把归档、分类和标签统一为一套视觉系统，同时保留 Hexo 原有分页、分类层级和 PJAX 行为。 改造后的页面分为四类： ：按年份分组的文章卡片； ：当前分类下的文章卡片； ：当前标签下的文章卡片； 和 ：分类索引卡片与标签索引卡片。 #开始前准备 这篇教程会修改主题模板、主题脚本和 Stylus 样式。第一次接触 Hexo 也不用担心，按下面的顺序操作即可。 找到博客根目录。能够看到 、 、 和 的文件夹，就是博客根目录。 复制一份 作为备份，或者先提交一次 Git。这样即使粘贴错误也可以快速恢复。 在博客根目录打开终端，执行 ，确保现有依赖已经安装。 后文出现的所有路径都从博客根目录开始计算，不要修改 目录。 是 Hexo 每次生成时自动创建的成品目录，直接修改会被覆盖。 每完成一个大步骤，都可以执行一次 。如果某一步写错，终端会更容易指出具体文件。 本文本身也由 Hexo 生成。为了防止文章中的 Nunjucks 示例被当成真正的主题指令执行，教程源文件对花括号做了转义；网页中显示和复制出来的代码仍然是正常的 Nunjucks 语法。真正修改 文件时，不要手动把花括号改成 HTML 实体。 #文件结构 #文件变更清单 下面先把文件级变化说清楚，再进入具体操作。这样即使是第一次修改主题，也能知道每一步应该新建文件、修改原文件，还是只做检查。 操作 文件 具体变化 新增 新建可复用的文章卡片宏，统一日期、标题、分类、字数、阅读时间和跳转箭头。 修改 删除原来的线性归档列表结构，改成概览卡、面包屑、年份分组和… ]]></description>
         </item>
@@ -74,8 +86,8 @@
             <title>Shoka主题：美化统计页面并新增多维图表</title>
             <link>https://blog.lavender816.top/posts/942686986/</link>
             <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
-            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
+            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <pubDate>Wed, 19 Aug 2026 10:00:00 +0800</pubDate>
             <description><![CDATA[ 重新设计 Shoka 主题统计页面，加入多年份文章日历、发布趋势、创作时钟、文章体量散点图、标签排行、分类分布以及分类与标签旭日图。 #前言 早期的统计页面只包含几个基础 ECharts 图表，功能可以使用，但在移动端、PJAX 页面切换、日间与夜间模式以及大量数据展示方面不够完善。本次改造在保留 Shoka 配色的基础上，重新设计图表卡片和加载方式，并让图表只在接近可视区域时初始化。 最终页面包含以下内容： 可从左侧切换年份的文章发布日历； 支持最近 6、12、24 个月、全部月份和自定义范围的发布趋势； 按星期和 24 小时展示发布习惯的创作时钟； 可点击进入文章、并随可视时间范围调整纵轴的文章体量散点图； TOP 10 标签、文章分类分布； 展示 “分类 → 标签” 关系的旭日图； PJAX 切换、窗口缩放、移动端和日间 / 夜间模式实时适配。 #开始前准备 如果是第一次修改 Hexo 主题，请先完成下面几项： 找到博客根目录。能看到 、 、 和 文件夹的目录就是根目录； 备份 和 ，或者先提交一次 Git； 在博客根目录打开终端，执行 ，确认依赖已经安装； 本文出现的路径都从博客根目录开始计算，不要把主题配置文件和站点根配置文件混淆； 每完成一个大步骤都可以执行一次 ，这样更容易找到出错位置。 本教程需要 、 和 。如果项目还没有安装，请执行： 请不要直接在 文件夹中修改代码。 是 Hexo 自动生成的目录，下一次执行 后其中的手动修改会全部消失。 #文件结构 本次主要涉及以下文件： #文件变更清单 下面按 “新增、修改、自动生成、删除” 说明每个文件发生了什么。这里描述的是完成本教程后的最终状态，实际操作时应按后文步骤依次进行。 操作 文件 具体变化 修改或重建 重做统计页结构和样式；加入年份选择、时间范围选择、7 个图表容器及主题同步脚本；关闭评论和版权区。若原… ]]></description>
         </item>
@@ -200,15 +212,6 @@
             <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <pubDate>Tue, 28 Dec 2021 20:30:00 +0800</pubDate>
             <description><![CDATA[ 新增页面：新增文章统计页面 #前言 最开始参考的 matery 主题的统计页面，后来看到 Eurkon 大佬的文章，因此，本文章根据大佬的 Hexo 博客文章统计图适配本主题而成，改进了一些地方（pjax 问题、明暗模式问题），还留存一点 bug（黑暗模式刷新后字体会变成日间模式的颜色，未解决） 参考文章：Hexo 博客文章统计图 #实现 #新建页面 在根目录下的 下新建文件夹，命名为 ，并在该目录下新建文件： ，填入以下内容： #安装 cheerio 在博客根目录下打开 ，安装 ： #更改语言并添加到菜单 刚才新建的 中，如果是用命令创建， 一行是英文，改成对应的中文就可以了； 在 中，找到 一行，新增 ； 在主题的 文件里，在 里添加到菜单中 #文章统计代码（已适配明暗模式） 在 目录下新建文件命名为 ，填入以下内容（注意修改下面有注释的开始统计时间）： #使用统计图（已适配明暗模式） 在刚刚新建的 下的 中新增内容： 其中 的 属性表示仅显示排名前 10 的标签。 引入的顺序不要错，不然会出错 #解决 pjax 加载问题 如果做到此步，就已经成功了，但是会发现，第一次会加载不出来，显示空白，只有再次点击或者刷新后才会显示，下面来解决此问题 在主题的 配置文件中，找到最下面的 ，在 一栏新增 引入： 代码： 找到 ，大概 24 行，找到 ，新增 内容，内容为下： 代码： 找到 ，找到大概 50 行，新增 的 ： 改后 #其他 如果想要修改图表的样式，请参考 官网：https://echarts.apache.org/zh/index.html 完成！ ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://blog.lavender816.top/posts/3334816243/</guid>
-            <title>Shoka主题：实现自定义网站字体</title>
-            <link>https://blog.lavender816.top/posts/3334816243/</link>
-            <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
-            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
-            <pubDate>Sat, 25 Dec 2021 14:30:00 +0800</pubDate>
-            <description><![CDATA[ 实现网站自定义的字体 #前言 可以看见，我的网站全局使用了鸿蒙字体； 网站的字体默认是从 google font 的 api 里加载的； 谷歌的字体库中文字体少的可怜，没有自己喜欢的； 如果想要修改自己喜欢的字体，那就继续看这篇文章吧！ #实现 #寻找字体 网络上有很多字体网站，如 100font、字由或者其他渠道的字体； 找到自己喜欢的，下载下来，格式一般为 #转换字体格式 web 中字体可能会用 、 、 等其他格式，所以需要转换下 这里推荐一个好用的字体转换网站：Online @font-face generator — Transfonter 进入网站后，点击 上传自己的字体 在下方的 里，全部勾选，其他选项保持默认，点击 进行转换 转换完成后，点击 下载下来，会获得一个压缩包，里面是各个格式的字体，转换字体即完成 #上传字体 解压压缩包，获得文件夹 如果有购买自己的 CDN 或者存储桶之类的，（防盗链如果要加，要留白名单），上传文件夹上去，获得各种格式的字体的链接 也可以使用百度加速、又拍云、jsDelivr 等 CDN，免费额度够用了 #修改代码 找到 ; 大概 130 行左右，仿照引入 iconfont 的方式，引入自己的字体 新增代码，使用 css 的 ： 找到主题的 文件，在 下修改字体的样式： 根据不同位置的字体需要，改相应部分的字体的 为刚才引入的字体名称 完成！ ]]></description>
         </item>
     </channel>
 </rss>
