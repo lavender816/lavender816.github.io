@@ -1,0 +1,1 @@
+{"menu":{"statistics":{"default":"/statistics/ || chart-area","poststatistics":"/statistics/ || clock"}},"vendors":{"js":{"echarts":"npm/echarts@6.1.0/dist/echarts.min.js"}}}
