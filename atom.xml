@@ -24,9 +24,9 @@
         <summary type="text">在原有 Shoka 特殊语法的基础上，整理适合写教程、项目介绍和图文记录的 Markdown 扩展，并补充本站已有的交互式 3D 留声机标签，以及本次新增的行内批注、参数卡片和阅读增强。这篇文章既是使用手册，也是一张可以直接操作的展示页：每一节先给出源码，再展示实际效果。 原有语法仍然可以照常使用，包括提示块、折叠块、选项卡、公式、Mermaid、行号与高亮代码块等。原有手册见 Step.4 主题特殊功能（转载）。本文的新增语法和查看器不会替换原有写法或音乐语法。 #一、扩展速览 扩展 最简写法 适合的内容 文件树 文件夹层级、项目结构、文件增删说明 代码树 一个示例包含多个代码文件时，切换查看 步骤流 安装、配置、排错等需要按顺序操作的教程 图片画廊网格 截图、作品集、照片；点击查看完整原图 GitHub 仓库卡片 分享开源项目 交互式 3D 留声机 成对标签 歌单唱片架、音乐播放、歌词与模型互动 行内批注 与 不打断阅读的术语解释和补充说明 参数卡片 配置项、接口字段、类型、必填与默认值 #使用前需要设置什么？ 除留声机外，表中的语法直接写在文章正文中即可，不需要为每篇文章单独打开开关，也不需要安装 Astro 或 Svelte。留声机还需要在该文章顶部的 Front Matter 中加入 ，具体见第七节。批注、参数卡片、流程图查看器与阅读设置见第九节。 多行容器以 结束；GitHub 卡片只有一行，不写结束标记。 参数写在开头的花括号中，含空格的值使用英文引号。 示例中的四个反引号仅用于在教程里展示三个反引号的写法；真正使用时，复制示例框里面的内容即可。 修改语法插件后，如果本地预览一直开着，需要重启一次 ；正常写文章不需要反复重启。 #二、文件树：清楚展示目录与文件改动 #2.1 用缩进列表写文件树 表示一项，前面多缩进两个空格，表示它属于上一层目录。 实际效果： …</summary>
         <category term="shoka主题" scheme="https://blog.lavender816.top/categories/shoka%E4%B8%BB%E9%A2%98/" />
         <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
+        <category term="教程" scheme="https://blog.lavender816.top/tags/%E6%95%99%E7%A8%8B/" />
         <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
         <category term="Markdown" scheme="https://blog.lavender816.top/tags/markdown/" />
-        <category term="教程" scheme="https://blog.lavender816.top/tags/%E6%95%99%E7%A8%8B/" />
         <updated>2026-09-05T04:00:00.000Z</updated>
     </entry>
     <entry>
@@ -46,8 +46,8 @@
         <summary type="text">本来想浏览主题作者的博客，奈何作者大大很久没更新了，网站：琉璃的医学 &amp;amp; 编程笔记打不开了，控制台找到报错： ，直接的意思是：在 app.js 第 1 行，变量 t 被声明了两次。浏览器直接拒绝执行这个文件；这样的报错许多 shoka 主题的很久没有维护的网站都出现了，但是我想临时看下博主网页内容，查到如下方法，作为记录，说不定以后也能用得上…… 适用场景：线上网站 JS 有语法错误 / 想临时改线上代码 / 改完刷新不丢失 / 覆盖后还能正常打断点 环境：Microsoft Edge（Chromium 内核，版本 ≥ 90 均可） 原理：DevTools 把线上文件存到本地文件夹，刷新时浏览器用本地副本代替网络响应 #一、整体流程一览 开 DevTools → Sources（源代码）→ Overrides（覆盖） 选一个空本地文件夹 → 点 Allow 授权 在 Page 树里找到报错的 JS → 右键 Save for overrides 在 Sources 编辑器里改代码 Ctrl + S 保存 → 刷新页面 → 浏览器用本地版 覆盖状态下照样可以点行号打断点 #二、详细步骤 #Step 1 打开 DevTools 快捷键：F12 或 Ctrl+Shift+I 切到顶部 Sources（源代码） 标签 #Step 2 进入 Overrides 并授权文件夹 左侧文件树底部切到 Overrides（覆盖） 标签（和 Page 并列，找不到点 更多标签） 点击 + Select folder for overrides（选择替代文件夹） 选一个空文件夹，例如： 系统弹窗点 允许（Allow） —— 这一步必须点，不点后面存不进磁盘 授权后： 文件夹出现在 Overrides 列表 Enable Local Overrides（启用本地替代） 复选框自动勾上 缓存…</summary>
         <category term="前端" scheme="https://blog.lavender816.top/categories/%E5%89%8D%E7%AB%AF/" />
         <category term="html" scheme="https://blog.lavender816.top/tags/html/" />
-        <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
         <category term="JavaScript" scheme="https://blog.lavender816.top/tags/javascript/" />
+        <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
         <updated>2026-08-24T14:30:00.000Z</updated>
     </entry>
     <entry>
