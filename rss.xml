@@ -47,8 +47,8 @@
             <title>在线网页加载本地资源</title>
             <link>https://blog.lavender816.top/posts/584182234/</link>
             <category term="前端" scheme="https://blog.lavender816.top/categories/%E5%89%8D%E7%AB%AF/" />
-            <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
             <category term="html" scheme="https://blog.lavender816.top/tags/html/" />
+            <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
             <category term="JavaScript" scheme="https://blog.lavender816.top/tags/javascript/" />
             <pubDate>Mon, 24 Aug 2026 22:30:00 +0800</pubDate>
             <description><![CDATA[ 本来想浏览主题作者的博客，奈何作者大大很久没更新了，网站：琉璃的医学 &amp; 编程笔记打不开了，控制台找到报错： ，直接的意思是：在 app.js 第 1 行，变量 t 被声明了两次。浏览器直接拒绝执行这个文件；这样的报错许多 shoka 主题的很久没有维护的网站都出现了，但是我想临时看下博主网页内容，查到如下方法，作为记录，说不定以后也能用得上…… 适用场景：线上网站 JS 有语法错误 / 想临时改线上代码 / 改完刷新不丢失 / 覆盖后还能正常打断点 环境：Microsoft Edge（Chromium 内核，版本 ≥ 90 均可） 原理：DevTools 把线上文件存到本地文件夹，刷新时浏览器用本地副本代替网络响应 #一、整体流程一览 开 DevTools → Sources（源代码）→ Overrides（覆盖） 选一个空本地文件夹 → 点 Allow 授权 在 Page 树里找到报错的 JS → 右键 Save for overrides 在 Sources 编辑器里改代码 Ctrl + S 保存 → 刷新页面 → 浏览器用本地版 覆盖状态下照样可以点行号打断点 #二、详细步骤 #Step 1 打开 DevTools 快捷键：F12 或 Ctrl+Shift+I 切到顶部 Sources（源代码） 标签 #Step 2 进入 Overrides 并授权文件夹 左侧文件树底部切到 Overrides（覆盖） 标签（和 Page 并列，找不到点 更多标签） 点击 + Select folder for overrides（选择替代文件夹） 选一个空文件夹，例如： 系统弹窗点 允许（Allow） —— 这一步必须点，不点后面存不进磁盘 授权后： 文件夹出现在 Overrides 列表 Enable Local Overrides（启用本地替代） 复选框自动勾上 缓存… ]]></description>
@@ -79,7 +79,7 @@
             <category term="Hexo" scheme="https://blog.lavender816.top/tags/hexo/" />
             <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <pubDate>Wed, 19 Aug 2026 10:30:00 +0800</pubDate>
-            <description><![CDATA[ 将 Shoka 默认的线性归档、分类和标签列表改造成统一的卡片页面，加入数据概览、层级分类、最近文章、日期卡片、面包屑和移动端适配。 #前言 Shoka 默认归档页面使用时间轴展示文章，结构清晰，但当文章、分类和标签逐渐增多后，页面会显得较长，也不容易快速浏览。本次改造把归档、分类和标签统一为一套视觉系统，同时保留 Hexo 原有分页、分类层级和 PJAX 行为。 改造后的页面分为四类： ：按年份分组的文章卡片； ：当前分类下的文章卡片； ：当前标签下的文章卡片； 和 ：分类索引卡片与标签索引卡片。 #开始前准备 这篇教程会修改主题模板、主题脚本和 Stylus 样式。第一次接触 Hexo 也不用担心，按下面的顺序操作即可。 找到博客根目录。能够看到 、 、 和 的文件夹，就是博客根目录。 复制一份 作为备份，或者先提交一次 Git。这样即使粘贴错误也可以快速恢复。 在博客根目录打开终端，执行 ，确保现有依赖已经安装。 后文出现的所有路径都从博客根目录开始计算，不要修改 目录。 是 Hexo 每次生成时自动创建的成品目录，直接修改会被覆盖。 每完成一个大步骤，都可以执行一次 。如果某一步写错，终端会更容易指出具体文件。 本文本身也由 Hexo 生成。为了防止文章中的 Nunjucks 示例被当成真正的主题指令执行，教程源文件对花括号做了转义；网页中显示和复制出来的代码仍然是正常的 Nunjucks 语法。真正修改 文件时，不要手动把花括号改成 HTML 实体。 #文件结构 #文件变更清单 下面先把文件级变化说清楚，再进入具体操作。这样即使是第一次修改主题，也能知道每一步应该新建文件、修改原文件，还是只做检查。 操作 文件 具体变化 新增 新建可复用的文章卡片宏，统一日期、标题、分类、字数、阅读时间和跳转箭头。 修改 删除原来的线性归档列表结构，改成概览卡、面包屑、年份分组和… ]]></description>
+            <description><![CDATA[ 将 Shoka 默认的线性归档、分类和标签列表改造成统一的卡片页面，加入数据概览、层级分类、最近文章、日期卡片、面包屑和移动端适配。 #前言 Shoka 默认归档页面使用时间轴展示文章，结构清晰，但当文章、分类和标签逐渐增多后，页面会显得较长，也不容易快速浏览。本次改造把归档、分类和标签统一为一套视觉系统，同时保留 Hexo 原有分页、分类层级和 PJAX 行为。 改造后的页面分为四类： ：按年份分组的文章卡片； ：当前分类下的文章卡片； ：当前标签下的文章卡片； 和 ：分类索引卡片与标签索引卡片。 #开始前准备 这篇教程会修改主题模板、主题脚本和 Stylus 样式。第一次接触 Hexo 也不用担心，按下面的顺序操作即可。 找到博客根目录。能够看到 、 、 和 的文件夹，就是博客根目录。 复制一份 作为备份，或者先提交一次 Git。这样即使粘贴错误也可以快速恢复。 在博客根目录打开终端，执行 ，确保现有依赖已经安装。 后文出现的所有路径都从博客根目录开始计算，不要修改 目录。 是 Hexo 每次生成时自动创建的成品目录，直接修改会被覆盖。 每完成一个大步骤，都可以执行一次 。如果某一步写错，终端会更容易指出具体文件。 本文本身也由 Hexo 生成。为了防止文章中的 Nunjucks 示例被当成真正的主题指令执行，教程源文件对花括号做了转义；网页中显示和复制出来的代码仍然是正常的 Nunjucks 语法。真正修改 文件时，不要手动把花括号改成 HTML 实体。 #文件结构 #文件变更清单 下面先把文件级变化说清楚，再进入具体操作。这样即使是第一次修改主题，也能知道每一步应该新建文件、修改原文件，还是只做检查。 操作 文件 具体变化 新增 新建可复用的文章卡片宏，统一日期、标题、分类、字数、阅读时间和跳转箭头。 新增 自动注册完整集合计数帮助函数 ，让分类、标签、年度和月度分… ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://blog.lavender816.top/posts/942686986/</guid>
@@ -156,7 +156,7 @@
             <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
             <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
             <pubDate>Wed, 22 Jun 2022 15:00:00 +0800</pubDate>
-            <description><![CDATA[ 修改首页文章摘要 hover 效果 #前言 想法来自于 HEO 大佬首页文章效果，实现首页文章摘要的 hover 显示效果 #实现 #修改 Stylus 找到 ; 大概 260 行左右，找到 代码部分，修改如下： 修改鼠标悬浮后图片变暗效果，增加 属性： 修改鼠标悬浮后旋转效果 修改另一个方向的旋转效果（410 行左右，即最后部分） 修改鼠标悬浮后内容宽度、标题位置，摘要显示 修改鼠标悬浮前标题位置 (340 行左右 处) 修改为 修改悬浮前摘要内容显示，在紧接着 下的 中 修改为（新增） 平滑过渡（290 行左右 ，315 行左右 ，340 行左右 ，350 行 中加入平滑动画代码 在 source/css/_mixins.styl 中，仿照 的写法，自定义 ，如下： 中我加入的平滑便是 适配移动端（270 行左右， 中加入 的 100% 属性保证移动端不会出现错位） } ``` #总结 最后把所有代码贴入（以上所有改后的 代码） 完成！ ]]></description>
+            <description><![CDATA[ 修改首页文章摘要 hover 效果 #前言 想法来自于 HEO 大佬首页文章效果，实现首页文章摘要的 hover 显示效果 #实现 #修改 Stylus 找到 ; 大概 260 行左右，找到 代码部分，修改如下： 修改鼠标悬浮后图片变暗效果，增加 属性： 修改鼠标悬浮后旋转效果 修改另一个方向的旋转效果（410 行左右，即最后部分） 修改鼠标悬浮后内容宽度、标题位置，摘要显示 修改鼠标悬浮前标题位置 (340 行左右 处) 修改为 修改悬浮前摘要内容显示，在紧接着 下的 中 修改为（新增） 平滑过渡（290 行左右 ，315 行左右 ，340 行左右 ，350 行 中加入平滑动画代码 在 source/css/_mixins.styl 中，仿照 的写法，自定义 ，如下： 中我加入的平滑便是 适配移动端（270 行左右， 中加入 的 100% 属性保证移动端不会出现错位） #总结 最后把所有代码贴入（以上所有改后的 代码） 完成！ ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://blog.lavender816.top/posts/1237297410/</guid>
@@ -181,8 +181,8 @@
             <title>冰墩墩雪容融</title>
             <link>https://blog.lavender816.top/posts/2028137251/</link>
             <category term="前端" scheme="https://blog.lavender816.top/categories/%E5%89%8D%E7%AB%AF/" />
-            <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
             <category term="html" scheme="https://blog.lavender816.top/tags/html/" />
+            <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
             <pubDate>Fri, 25 Feb 2022 22:00:00 +0800</pubDate>
             <description><![CDATA[ 这里记录下冰墩墩和雪容融的前端代码，源码从网络上获得，仅作记录 #冰墩墩 #HTML 部分 #CSS 部分 #效果图 #雪容融 #HTML 部分 #CSS 部分 #效果图 ]]></description>
         </item>
