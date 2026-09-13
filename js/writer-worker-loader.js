@@ -1,1 +1,1 @@
-try{importScripts("https://cdn.lavender816.top/js/writer-worker.min.js?v=0.2.90");}catch(error){self.postMessage({type:'boot-error'});}
+try{importScripts("https://cdn.lavender816.top/js/writer-worker.min.js?v=0.2.91");}catch(error){self.postMessage({type:'boot-error'});}
