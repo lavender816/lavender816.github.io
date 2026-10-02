@@ -1,0 +1,1 @@
+try{importScripts("https://cdn.lavender816.top/js/writer-worker.min.d8f1684831eda47c.js");}catch(error){self.postMessage({type:'boot-error'});}
