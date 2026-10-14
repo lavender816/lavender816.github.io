@@ -20,6 +20,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="./fonts/loader.20a77b2941e315efb00ab95d.js" data-jizura-font-loader></script>
 <style>
 :root {
   color-scheme: dark;
@@ -1050,19 +1051,6 @@ J.fontCSS = (key, px) => {
 
 /* Google Fonts stylesheets are attached lazily, one family at a time, only for the faces a plan actually uses —
    adding faces to the catalogue therefore costs nothing until a style or setting picks them */
-const cssJobs = new Map();
-function attachFamily(spec) {
-  if (!spec || typeof document === 'undefined' || !document.head) return Promise.resolve();
-  if (cssJobs.has(spec)) return cssJobs.get(spec);
-  const job = new Promise(res => {
-    const l = document.createElement('link');
-    l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=' + spec + '&display=swap';
-    const done = () => res(); l.onload = done; l.onerror = done; setTimeout(done, 5000);
-    document.head.appendChild(l);
-  });
-  cssJobs.set(spec, job);
-  return job;
-}
 /* font keys a plan draws with: style roles, per-cut font params, mono for HUD */
 J.fontsOfPlan = (plan) => {
   const set = new Set(['mono']);
@@ -1077,28 +1065,21 @@ J.fontsOfPlan = (plan) => {
   return out;
 };
 /* make sure the glyphs we need are loaded (Google Fonts are unicode-range split). keys = null → every catalogue face */
+// Downstream font fallback: bounded online-first loading; all assets stay under /jizura/.
 J.ensureFonts = async (text, keys) => {
   if (!document.fonts || !document.fonts.load) return;
-  const uniq = [...new Set([...text])].join('') || 'あ';
-  if (keys && keys.includes('@var')) {
-    await Promise.all(['Noto+Sans+JP:wght@100..900', 'Noto+Serif+JP:wght@200..900'].map(attachFamily));
-    await Promise.all(['100 64px "Noto Sans JP"', '900 64px "Noto Sans JP"', '200 64px "Noto Serif JP"', '900 64px "Noto Serif JP"'].map(f => document.fonts.load(f, uniq).catch(() => null)));
-  }
-  const list = (keys || Object.keys(J.FONTS)).filter(k => J.FONTS[k]);
-  // faces in the current lyric language (+ its fallback sans / serif), each with the weight it is drawn at
-  const faces = list.map(k => (J.faceOf ? J.faceOf(k) : J.FONTS[k]));
+  const uniq = [...new Set([...String(text || '')])].join('') || 'あ';
+  const list = (keys || Object.keys(J.FONTS)).filter(k => k !== '@var' && J.FONTS[k]);
+  const faces = list.map(k => J.faceOf ? J.faceOf(k) : J.FONTS[k]);
   if (J.langBaseFaces) for (const b of J.langBaseFaces(list)) faces.push({ family: '"' + b.family + '"', weight: b.weight, gf: b.gf });
-  await Promise.all([...new Set(faces.map(f => f.gf).filter(Boolean))].map(attachFamily));
-  const jobs = [], seen = new Set();
-  for (const f of faces) {
-    const spec = `${f.weight} 64px ${f.family}`;
-    if (seen.has(spec)) continue; seen.add(spec);
-    jobs.push(document.fonts.load(spec, uniq).catch(() => null));
-  }
-  await Promise.all(jobs);
-  if (document.fonts.ready) await document.fonts.ready;
-  J.glyphs.clear();
-  J.metrics.clear();
+  // The shell uses these faces regardless of the selected lyric language.
+  for (const k of ['sansui', 'mono', 'mincho_black']) faces.push(J.FONTS[k]);
+  if (keys && keys.includes('@var')) for (const [family, weights, gf] of [
+    ['Noto Sans JP', [100, 900], 'Noto+Sans+JP:wght@100..900'],
+    ['Noto Serif JP', [200, 900], 'Noto+Serif+JP:wght@200..900']
+  ]) for (const weight of weights) faces.push({ family: '"' + family + '"', weight, gf });
+  if (window.JizuraFonts) await window.JizuraFonts.ensure(faces, uniq);
+  J.glyphs.clear(); J.metrics.clear();
 };
 
 /* ---------- metrics (advance widths) ---------- */
