@@ -20,6 +20,7 @@
 - `source/orbit/index.html` 是保留的单文件原始输入，不要手动修改其中的图片字符串。执行 `hexo generate` 时，`scripts/orbit-assets.js` 调用 `lib/orbit-assets.cjs` 自动提取资源。
 - 生成入口为 `public/orbit/index.html`。独立脚本、样式及 15 张原字节贴图输出到 `public/orbit/assets/`，资源清单为 `public/orbit/asset-manifest.json`。运行 `hexo clean` 后仍可从源码完整重建。
 - 图片、JS、CSS 和资源加载器的文件名包含内容指纹；资源未改则文件名不变，切换主题 `statics` 地址也不会改变这些资源的字节或文件名。此页面使用独立清单，不注入 Shoka 的资源表与运行时。
+- 文本资源在计算指纹和完整性校验值之前统一使用 LF 换行，避免 Windows 的 Git 部署把 CRLF 转成 LF 后出现校验失败；图片始终保留原字节。无需关闭完整性校验，也不用修改全局 Git 设置。修复前已发布的入口仍引用旧指纹，需要重新生成、上传 CDN 资源并发布新入口后才能生效。
 - 生成时附带独立的行星 SVG 站点图标，并明确引用本站带指纹的图标文件，避免浏览器默认请求不存在的根目录 `favicon.ico`。不依赖博客主题的图标或脚本。
 - 资源跟随 `themes/shoka/_config.yml` 的 `statics`：`/` 使用本站，`//cdn.example.com/` 或 HTTPS 地址优先使用 CDN；生成的本地文件总是保留。把同一批 `public` 完整上传到 CDN，并保留 `orbit/assets/` 层级，再发布入口页面。
 - CDN 加载失败或等待超时后回退到本站同名文件，并在当前页面会话中优先使用本站，避免每张贴图反复等待失效的 CDN。图片最多同时传输四张，不使用跨域 Cookie；JS/CSS 使用完整性校验，贴图也校验字节数并在支持的环境核对哈希。
