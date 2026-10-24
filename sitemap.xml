@@ -4,16 +4,25 @@
   <url>
     <loc>https://blog.lavender816.top/aboutsite/</loc>
     
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/2026090501/</loc>
+    <loc>https://blog.lavender816.top/assets/blog-pet/manifest.json</loc>
     
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/posts/2026102401/</loc>
+    
+    <lastmod>2026-10-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +31,25 @@
   <url>
     <loc>https://blog.lavender816.top/posts/2026092801/</loc>
     
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/posts/3465887140/</loc>
+    
+    <lastmod>2026-10-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/posts/2026090501/</loc>
+    
+    <lastmod>2026-10-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -407,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/2028137251/</loc>
+    <loc>https://blog.lavender816.top/posts/3778039664/</loc>
     
     <lastmod>2024-01-03</lastmod>
     
@@ -416,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/3778039664/</loc>
+    <loc>https://blog.lavender816.top/posts/2028137251/</loc>
     
     <lastmod>2024-01-03</lastmod>
     
@@ -533,24 +560,6 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/905620251/</loc>
-    
-    <lastmod>2022-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lavender816.top/posts/3465887140/</loc>
-    
-    <lastmod>2022-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.lavender816.top/posts/4090999481/</loc>
     
     <lastmod>2022-01-09</lastmod>
@@ -560,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/3679514935/</loc>
+    <loc>https://blog.lavender816.top/posts/905620251/</loc>
     
     <lastmod>2022-01-09</lastmod>
     
@@ -579,6 +588,15 @@
   
   <url>
     <loc>https://blog.lavender816.top/posts/3314647115/</loc>
+    
+    <lastmod>2022-01-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/posts/3679514935/</loc>
     
     <lastmod>2022-01-09</lastmod>
     
@@ -632,7 +650,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/2116237364/</loc>
+    <loc>https://blog.lavender816.top/posts/41663234/</loc>
     
     <lastmod>2022-01-09</lastmod>
     
@@ -641,7 +659,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/41663234/</loc>
+    <loc>https://blog.lavender816.top/posts/2116237364/</loc>
     
     <lastmod>2022-01-09</lastmod>
     
@@ -704,25 +722,16 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/1910828737/</loc>
-    
-    <lastmod>2022-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lavender816.top/posts/2290909706/</loc>
-    
-    <lastmod>2022-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.lavender816.top/posts/3936759658/</loc>
+    
+    <lastmod>2022-01-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/posts/1924469306/</loc>
     
     <lastmod>2022-01-09</lastmod>
     
@@ -749,7 +758,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/1924469306/</loc>
+    <loc>https://blog.lavender816.top/posts/490463724/</loc>
     
     <lastmod>2022-01-09</lastmod>
     
@@ -758,7 +767,16 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/posts/490463724/</loc>
+    <loc>https://blog.lavender816.top/posts/2290909706/</loc>
+    
+    <lastmod>2022-01-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/posts/1910828737/</loc>
     
     <lastmod>2022-01-09</lastmod>
     
@@ -801,14 +819,35 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/tags/hexo/</loc>
+    <loc>https://blog.lavender816.top/tags/java/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://blog.lavender816.top/tags/c/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/tags/mfc/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/tags/hexo/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -843,6 +882,13 @@
   </url>
   
   <url>
+    <loc>https://blog.lavender816.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.lavender816.top/tags/html/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -851,41 +897,6 @@
   
   <url>
     <loc>https://blog.lavender816.top/tags/css/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lavender816.top/tags/javascript/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lavender816.top/tags/c/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lavender816.top/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lavender816.top/tags/mfc/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lavender816.top/tags/java/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -906,7 +917,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://blog.lavender816.top/tags/javascript/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -954,7 +965,28 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.lavender816.top/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://blog.lavender816.top/categories/JAVA/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lavender816.top/categories/CG/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://blog.lavender816.top/categories/HEXO/</loc>
@@ -985,20 +1017,6 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/categories/CG/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lavender816.top/categories/JAVA/</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.lavender816.top/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -1006,14 +1024,14 @@
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://blog.lavender816.top/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.lavender816.top/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://blog.lavender816.top/categories/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
