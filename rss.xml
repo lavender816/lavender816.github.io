@@ -10,8 +10,8 @@
         </author>
         <description>Lavender 的个人技术博客，分享 Hexo 与 Shoka 主题改造、前端开发、Java、计算机图形学、软件工具及学习笔记。</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 24 Oct 2026 17:30:00 +0800</pubDate>
-        <lastBuildDate>Sat, 24 Oct 2026 17:30:00 +0800</lastBuildDate>
+        <pubDate>Tue, 27 Oct 2026 20:30:00 +0800</pubDate>
+        <lastBuildDate>Tue, 27 Oct 2026 20:30:00 +0800</lastBuildDate>
         <category term="Lavender博客" />
         <category term="Hexo" />
         <category term="Shoka主题" />
@@ -20,6 +20,15 @@
         <category term="计算机图形学" />
         <category term="技术教程" />
         <category term="软件分享" />
+        <item>
+            <guid isPermalink="true">https://blog.lavender816.top/posts/2026102701/</guid>
+            <title>Shoka主题：从零搭建博客宠物（大肥鱼）</title>
+            <link>https://blog.lavender816.top/posts/2026102701/</link>
+            <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
+            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
+            <pubDate>Tue, 27 Oct 2026 20:30:00 +0800</pubDate>
+            <description><![CDATA[ 从零给 Hexo + Shoka 博客加一只桌面宠物：会呼吸、会挥手、能拖动、能记住位置和大小，电脑默认显示、手机默认隐藏。本文提供一个可以直接复制运行的最小版本，完全不需要安装依赖；文末再说明如何升级成本站的 106 动作完整版。 #前言 很多博客的“宠物”看起来很复杂，实际上可以拆成三个很朴素的部分： 一张会动的图：透明背景的 WebM 视频，或者一张透明 WebP 静图； 一个固定在屏幕上的盒子：用 放在右下角，用 CSS 移动； 一点本地状态：用 记住显示/隐藏、大小和位置，不需要数据库，也不需要服务器。 本文会带你做一个最小可用版： 右下角工具栏出现宠物开关； 电脑默认显示，手机/平板默认隐藏，点开关可手动打开； 待机循环动画，点击播放一次挥手，拖拽时切换拖动动画； 拖到任意位置，松手后保存；刷新后仍在原处； 菜单里可以调大小、回到右下角、隐藏宠物； 支持日间/夜间主题色、减弱动效、键盘操作和 PJAX 站内切页； 不调用 AI、不联网、不需要后端。 本文的示例素材来自开源项目 PC2005-cloud/dsh-pet。代码可以自由修改，但角色和动画素材禁止商用，大肥鱼形象为 CC BY-NC-SA 4.0。如果要商用，请先换成你有商用授权的角色素材。文末有完整说明。 #开始前准备 #1. 确认环境 在博客根目录打开终端（Windows 用 PowerShell，macOS 用 Terminal），执行： 能看到 Node.js 和 Hexo 版本即可。本文假设你已经有一个能正常运行的 Hexo + Shoka 博客，并且知道： 博客根目录：包含 、 、 的那一层； 主题目录： ； 会用文件管理器复制文件； 会用编辑器（VS Code、Sublime、记事本均可）打开文本文件。 #2. 备份 先备份这几个位置，改坏了可以恢复： Windows PowerShell… ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://blog.lavender816.top/posts/2026102401/</guid>
             <title>Shoka主题：新增显示与阅读设置</title>
@@ -206,15 +215,6 @@
             <category term="css" scheme="https://blog.lavender816.top/tags/css/" />
             <pubDate>Fri, 25 Feb 2022 22:00:00 +0800</pubDate>
             <description><![CDATA[ 这里记录下冰墩墩和雪容融的前端代码，源码从网络上获得，仅作记录 #冰墩墩 #HTML部分 #CSS部分 #效果图 #雪容融 #HTML部分 #CSS部分 #效果图 ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://blog.lavender816.top/posts/22579722/</guid>
-            <title>Shoka主题：新增博客新年灯笼</title>
-            <link>https://blog.lavender816.top/posts/22579722/</link>
-            <category term="SHOKA" scheme="https://blog.lavender816.top/categories/SHOKA/" />
-            <category term="shoka" scheme="https://blog.lavender816.top/tags/shoka/" />
-            <pubDate>Wed, 05 Jan 2022 15:00:00 +0800</pubDate>
-            <description><![CDATA[ 新增：博客页面右上角新年灯笼 #前言 本文参考：知更鸟：过年啦，挂灯笼！ （原作者） 之前的wordpress主题也搞过这个灯笼，还是挺简单的，临近农历新年，在这个主题再搞一下 #实现 #新增主题设置 在主题的 文件中，找到 ，下面新增 选项，如下： #新增 在 中新增（可以在 这句代码前增加以下内容) #添加样式表 在根目录的 新建文件命名为 ； 填入以下内容： 重新生成，🆗 完成！ ]]></description>
         </item>
     </channel>
 </rss>
