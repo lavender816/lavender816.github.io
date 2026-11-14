@@ -1,0 +1,149 @@
+{
+  "upstream": "dbbd064626a475041898eda36eb53cb75d72eaf8",
+  "files": [
+    {
+      "file": "apple-touch-icon.png",
+      "sha256": "df46895163400927ee675faae2caeb3b16c82a6d17538b1fbe7addaedb8d2a86"
+    },
+    {
+      "file": "assets/catalogue-BQ0X8CbC.js",
+      "sha256": "64883437fc6654e3a979e441187c11b7c20b486b8ae08501bf7c3d2318459aa4"
+    },
+    {
+      "file": "assets/comparison-scene-AdWi4yd5.js",
+      "sha256": "764e151ffe4fc03951847412c80c3dc3fff3848d442d4cfa6a817f69d8122c40"
+    },
+    {
+      "file": "assets/comparison-state-RhAOne94.js",
+      "sha256": "90b7c58642f1959f81e37d8e64b1ae62d1a0cf35517803e4072be55c64d65ce4"
+    },
+    {
+      "file": "assets/guide-401369092018ff55.css",
+      "sha256": "401369092018ff55dcc68c6c4f01401e6f46f1192de38537980feed378661cd2"
+    },
+    {
+      "file": "assets/guide-83227600e7d81895.css",
+      "sha256": "83227600e7d81895f2449f6244a1e584d956d97f1545e5f4a8ca03c31865fb8c"
+    },
+    {
+      "file": "assets/loader-91cef40e9ca571a7.js",
+      "sha256": "91cef40e9ca571a7204a9b73ffc3a0d1c6b8bcb707c01359874e3d1797cb97a1"
+    },
+    {
+      "file": "assets/loading-43894997f2d4b133.css",
+      "sha256": "43894997f2d4b133f8cb821da3fb319ffc477bd8ed0f061a96ac5692a9c6c240"
+    },
+    {
+      "file": "assets/locale-zh-DSPdXod1.js",
+      "sha256": "ae4804919780a61cf1798c56af4d911ad5a3285076290a2a319deb63aa162db1"
+    },
+    {
+      "file": "assets/pc-app-C-foNTNX.css",
+      "sha256": "76467d15c3384c5a1c6ba335d6d5ad8c98ada9047f4f7e44e35a33d8429e9cfe"
+    },
+    {
+      "file": "assets/pc-app-U23RGTLK.js",
+      "sha256": "d55f1689a67bf94fc98931d90eaf08fb678c75ceca2cafcd4bf7e01fb2f76474"
+    },
+    {
+      "file": "assets/power-flow-policy-BYG9CT5V.js",
+      "sha256": "41af6814eb95c57f9097900a736ddcb73a0318b0e3e7186eb657f000213303d3"
+    },
+    {
+      "file": "assets/raycast-82YSsTv3.js",
+      "sha256": "11028145c9dd71a8962bf40fc4df72700797c63bd4dfab6e88875c92d9b3c17f"
+    },
+    {
+      "file": "assets/react-runtime-CNMPkJkM.js",
+      "sha256": "baed76b4956e74b374a505db5ddc44560311e92dca0751a34bdd5722055cac2e"
+    },
+    {
+      "file": "assets/rolldown-runtime-jpDsebLB.js",
+      "sha256": "1b13387cb23dc39bf70e31677c21f6db5cad3377b96f286b6ee444496e5bfea7"
+    },
+    {
+      "file": "assets/scene-wSg3N9ba.js",
+      "sha256": "8d3d4c00f22344ec24a9cb4b0fe97873f6716208b99329595f8437f701c1a1e3"
+    },
+    {
+      "file": "assets/stage-runtime-uKgMOWz1.js",
+      "sha256": "ea9c7452efc675a3c37b4c92919449eee2c2fdcc83ed91b16956dbc5beb26d9c"
+    },
+    {
+      "file": "assets/three-engine-9_PbadDi.js",
+      "sha256": "a7b7cb4b4e6239358460f16249c1d73f51367fb7707afbae481adaf9ecd554c5"
+    },
+    {
+      "file": "assets/three-engine-BdvHB-5Q.js",
+      "sha256": "78cc6a8b1d427e5cf3b1ef82660d3f6d8297409f6970799fba815bc18d48fa13"
+    },
+    {
+      "file": "assets/three-engine-Dbe4_SA5.js",
+      "sha256": "631543ae117451cace8208b8b053f7e0db69c7d6afb810ae52d6d3e96f341d32"
+    },
+    {
+      "file": "assets/ui-controls-D8GkBfCC.js",
+      "sha256": "c74df0228fb4a84be36660b021622d8c09928194de103ab7a7a6d3d62f7b29bb"
+    },
+    {
+      "file": "favicon-96.png",
+      "sha256": "95d8a3476c6683fba4880d1dae049a2abb9a6416f3dc452ea493a21b7198e36f"
+    },
+    {
+      "file": "favicon.ico",
+      "sha256": "0a78c674b305d2ee15469db3ac7e8dadf86a728423b95b6ccbaa11d7ddd4df0d"
+    },
+    {
+      "file": "favicon.svg",
+      "sha256": "8106ed38c97180e350f814b16c04dc122f558868ce5b9a414de283c04f4122e2"
+    },
+    {
+      "file": "guide/en/index.html",
+      "sha256": "508010ff7cd0b5ce4877eb54582ae3b206f82a51e5dbd2005dab481a2fbfb21c"
+    },
+    {
+      "file": "guide/index.html",
+      "sha256": "e97be132767b401b46f2f03364cc106d197bad13229029331eeb23c26e5f301b"
+    },
+    {
+      "file": "icon-192.png",
+      "sha256": "38e1224a7fd3e5ae8c1cc63b4a74defd943935d3ab80d6ccd67f68da249e4494"
+    },
+    {
+      "file": "icon-512.png",
+      "sha256": "74ec7e9525c0ede8bea43eca940825a75e25ee598189b2e8fc166c54addf2d4d"
+    },
+    {
+      "file": "index.html",
+      "sha256": "413e9b03d8945c0465358eb6b3c2f315e553d68dc75d46c98c2c530c727ddbf5"
+    },
+    {
+      "file": "LICENSE",
+      "sha256": "1562c61c0c5057e609855cc400e0027371c50a2713635ddd01e4624d11f395fa"
+    },
+    {
+      "file": "pc-assembled.png",
+      "sha256": "9313a528995ee46a7dfd86a8ad9a7ccdf78bc7d6a0f8db1e476914d276b8558d"
+    },
+    {
+      "file": "site.webmanifest",
+      "sha256": "06121d141d81ac2719f740e837633e37d8f753a4ba2e0619c3ec99a2c12761f5"
+    },
+    {
+      "file": "social-preview.png",
+      "sha256": "627b3101699ac0f50a2ac5bf399ed1a68b472ac3fcbfd95cae043b30e76f7989"
+    },
+    {
+      "file": "SOURCES.md",
+      "sha256": "a7edc74bc273312e9452236ef5df4061f1652f53ff96fd2bd7d84470be79d660"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.txt",
+      "sha256": "4d39ea99a5befe77e8bc0981edd8180ca562b8c0805032d6999484615e2b56f0"
+    },
+    {
+      "file": "UPSTREAM.md",
+      "sha256": "a447893cb4fabd5ade675b7c8b4497f6d8cac870daa1029826bcaeb6e1012bfa"
+    }
+  ]
+}
